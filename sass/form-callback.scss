@@ -1,0 +1,26 @@
+.form-callback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ecf0f1;
+}
+
+.form-callback__input {
+  padding-left: 45px;
+  width: 70%;
+  height: 31px;
+  font-size: 14px;
+  border: none;
+
+  &--name {
+    margin: 25px 0 21px;
+    background: #fff url('../img/icon-name.svg') no-repeat ;
+
+  }
+
+  &--phone {
+    margin-bottom: 18px;
+    background: #fff url('../img/icon-phone.svg') no-repeat ;
+
+  }
+}

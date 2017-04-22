@@ -1,0 +1,23 @@
+.modal-callback {
+  margin: 0 auto;
+  position: absolute;
+  top: 250px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 280px;
+  background: #ccc;
+  box-sizing: border-box;
+}
+
+.modal-callback__header {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 22px/24px Cuprum;
+  background: #7f8c8d;
+  color: #ecf0f1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

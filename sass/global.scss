@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  padding: 20px 0 30px;
+  top: 0;
+  width: 100%;
+  background: rgba(27, 27, 27, 0.9)
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+
+
+
+@font-face {
+  font-family: 'MyriadProCond';
+  src: url('../fonts/MyriadProCond.eot');
+  src: url('../fonts/MyriadProCond.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/MyriadProCond.woff') format('woff'),
+  url('../fonts/MyriadProCond.ttf') format('truetype'),
+  url('../fonts/MyriadProCond.svg') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadProCond';
+  src: url('../fonts/MyriadProCondIt.eot');
+  src: url('../fonts/MyriadProCondIt.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/MyriadProCondIt.woff') format('woff'),
+  url('../fonts/MyriadProCondIt.ttf') format('truetype'),
+  url('../fonts/MyriadProCondIt.svg') format('svg');
+  font-weight: 400;
+  font-style:  italic;
+}
+
+@font-face {
+  font-family: 'MyriadProCond';
+  src: url('../fonts/MyriadProSemiboldCond.eot');
+  src: url('../fonts/MyriadProSemiboldCond.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/MyriadProSemiboldCond.woff') format('woff'),
+  url('../fonts/MyriadProSemiboldCond.ttf') format('truetype'),
+  url('../fonts/MyriadProSemiboldCond.svg') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadProCond';
+  src: url('../fonts/MyriadProBoldCond.eot');
+  src: url('../fonts/MyriadProBoldCond.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/MyriadProBoldCond.woff') format('woff'),
+  url('../fonts/MyriadProBoldCond.ttf') format('truetype'),
+  url('../fonts/MyriadProBoldCond.svg') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadProCond';
+  src: url('../fonts/MyriadProCondIt.eot');
+  src: url('../fonts/MyriadProCondIt.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/MyriadProCondIt.woff') format('woff'),
+  url('../fonts/MyriadProCondIt.ttf') format('truetype'),
+  url('../fonts/MyriadProCondIt.svg') format('svg');
+  font-weight: 700;
+  font-style:  italic;
+}
