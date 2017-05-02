@@ -92,18 +92,37 @@ $(function(){
 var topMenu = document.querySelector('#menu');
 var toggleMenu = document.querySelector('.menu-toggle');
 var mainMenu = topMenu.querySelector('.main-menu');
+var modalCallback = document.querySelector('.modal-callback');
+var toggleCallback = topMenu.querySelector('.call-me__callback-toggle');
 
-
-
-var openMenu = function () {
-  if (mainMenu.classList.contains('hidden')) {
-    mainMenu.classList.remove('hidden');
-  } else {
-    mainMenu.classList.add('hidden');
+var objectClick = [
+  {
+    nameToggle: toggleMenu,
+    openBlock: mainMenu
+  },
+  {
+    nameToggle: toggleCallback,
+    openBlock: modalCallback
   }
-};
+];
 
-toggleMenu.addEventListener('click', openMenu);
+var openAnyBlock = (function () {
+  for (var i = 0; i < objectClick.length; i++) {
+    objectClick[i].nameToggle.addEventListener('click', function (evt) {
+      var indexPin = evt.currentTarget.getAttribute('data-index');
+      if (objectClick[indexPin].openBlock.classList.contains('hidden')) {
+        objectClick[indexPin].openBlock.classList.remove('hidden');
+        document.addEventListener('keydown', function (evt) {
+          if (evt.keyCode === 27) {
+            objectClick[indexPin].openBlock.classList.add('hidden');
+          }
+        })
+      } else {
+        objectClick[indexPin].openBlock.classList.add('hidden');
+      }
+    });
+  }
+})();
 
 
 

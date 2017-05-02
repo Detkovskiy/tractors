@@ -16,8 +16,8 @@
   align-items: center;
   justify-content: center;
   font: 22px/24px Cuprum;
-  background: #7f8c8d;
-  color: #ecf0f1;
+  background: $form-callback__color;
+  color: $form-callback__color-text;
   letter-spacing: 1px;
   text-transform: uppercase;
 }

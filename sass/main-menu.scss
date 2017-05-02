@@ -40,4 +40,9 @@
   height: 30px;
   border: none;
   background: url('../img/toggle-menu.svg') no-repeat center;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(221, 232, 220, 0.5);
+    transform: scale(1.1);
+  }
 }
