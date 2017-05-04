@@ -16,12 +16,12 @@ $(document).ready(function(){
 
 
 
-var h_hght = 0; // высота шапки
+var h_hght = 91; // высота шапки
 var h_mrg = 0;    // отступ когда шапка уже не видна
 
 $(function(){
 
-  var elem = $('#top_nav');
+  var elem = $('#sub-menu');
   var top = $(this).scrollTop();
 
   if(top > h_hght){
@@ -39,7 +39,6 @@ $(function(){
   });
 
 });
-
 
 /*// Map
 	ymaps.ready(function(){
@@ -91,9 +90,10 @@ $(function(){
 
 var topMenu = document.querySelector('#menu');
 var toggleMenu = document.querySelector('.menu-toggle');
-var mainMenu = topMenu.querySelector('.main-menu');
+var mainMenu = document.querySelector('.main-menu');
 var modalCallback = document.querySelector('.modal-callback');
-var toggleCallback = topMenu.querySelector('.call-me__callback-toggle');
+var toggleCallback = document.querySelector('.call-me__callback-toggle');
+/*
 
 var objectClick = [
   {
@@ -105,6 +105,100 @@ var objectClick = [
     openBlock: modalCallback
   }
 ];
+*/
+
+var sizeTopMenu = function (position) {
+  var cordY = (position == 0) ? position + 80 : position - 30;
+  return cordY;
+};
+
+var sizeCallBack = function (position) {
+  var cordY = (position == 0) ? position + 200 : position + 124;
+  return cordY;
+};
+
+var openMainMenu = (function () {
+  toggleMenu.addEventListener('click', function () {
+    if (mainMenu.classList.contains('hidden')) {
+      mainMenu.classList.remove('hidden');
+      mainMenu.setAttribute('style', 'top:' + sizeTopMenu($(window).scrollTop()) + 'px;');
+      console.log($(window).scrollTop());
+      document.addEventListener('keydown', function (evt) {
+        if (evt.keyCode === 27) {
+          mainMenu.classList.add('hidden');
+        }
+      });
+      if (window.innerWidth < 1000) {
+        console.log(window.innerWidth);
+        mainMenu.addEventListener('click', function () {
+          mainMenu.classList.add('hidden');
+        });
+      }
+
+
+      /*document.addEventListener('click', function () {
+
+          mainMenu.classList.add('hidden');
+
+      });*/
+    } else {
+      mainMenu.classList.add('hidden');
+    }
+  });
+})();
+
+var openCallBack = (function () {
+  toggleCallback.addEventListener('click', function () {
+    if (modalCallback.classList.contains('hidden')) {
+      modalCallback.classList.remove('hidden');
+      modalCallback.setAttribute('style', 'top:' + sizeCallBack($(window).scrollTop()) + 'px;');
+      console.log($(window).scrollTop());
+      document.addEventListener('keydown', function (evt) {
+        if (evt.keyCode === 27) {
+          modalCallback.classList.add('hidden');
+        }
+      });
+
+      /*document.addEventListener('click', function () {
+
+       mainMenu.classList.add('hidden');
+
+       });*/
+    } else {
+      modalCallback.classList.add('hidden');
+    }
+  });
+})();
+
+/*
+
+
+
+var openCallBack = (function () {
+  toggleMenu.addEventListener('click', function () {
+    if (mainMenu.classList.contains('hidden')) {
+      mainMenu.classList.remove('hidden');
+      mainMenu.setAttribute('style', 'top:' + sizeTopMenu($(window).scrollTop()) + 'px;');
+      console.log($(window).scrollTop());
+      document.addEventListener('keydown', function (evt) {
+        if (evt.keyCode === 27) {
+          mainMenu.classList.add('hidden');
+        }
+      });
+      /!*document.addEventListener('click', function () {
+
+       mainMenu.classList.add('hidden');
+
+       });*!/
+    } else {
+      mainMenu.classList.add('hidden');
+    }
+  });
+})();
+*/
+
+
+/*
 
 var openAnyBlock = (function () {
   for (var i = 0; i < objectClick.length; i++) {
@@ -112,6 +206,8 @@ var openAnyBlock = (function () {
       var indexPin = evt.currentTarget.getAttribute('data-index');
       if (objectClick[indexPin].openBlock.classList.contains('hidden')) {
         objectClick[indexPin].openBlock.classList.remove('hidden');
+        objectClick[indexPin].openBlock.setAttribute('style', 'top:' + sizeTopMenu($(window).scrollTop()) + 'px;');
+        console.log($(window).scrollTop());
         document.addEventListener('keydown', function (evt) {
           if (evt.keyCode === 27) {
             objectClick[indexPin].openBlock.classList.add('hidden');
@@ -124,6 +220,7 @@ var openAnyBlock = (function () {
   }
 })();
 
+*/
 
 
 jQuery(function($){

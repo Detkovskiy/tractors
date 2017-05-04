@@ -1,0 +1,16 @@
+.main-title {
+ padding: 30px;
+
+  & h1 {
+    margin: 0;
+    font: 48px/50px Cuprum;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &--border {
+    margin-bottom: 8px;
+    border-bottom: 8px solid $primary__red;
+  }
+}

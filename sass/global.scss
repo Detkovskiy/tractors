@@ -6,12 +6,37 @@ a {
   text-decoration: none;
 }
 
+body {
+  background: url('../img/backgrounds/bg-body.jpg');
+  color: $primary__black;
+}
+
 header {
-  position: fixed;
-  padding: 20px 0 30px;
-  top: 0;
+  padding: 20px 0 80px;
+  //top: 0;
   width: 100%;
-  background: rgba(27, 27, 27, 0.9)
+ // background: rgba(27, 27, 27, 0.9);
+  background: $primary__black;
+}
+
+h2  {
+  margin: 0 0 40px;
+  font: 700 27px/40px MyriadProCond;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #000;
+  background: url('../img/backgrounds/h2_bg.svg') 14px 9px repeat-x;
+  background-size: 8px;
+
+  & span {
+    padding-right: 11px;
+    background: url('../img/backgrounds/bg-body.jpg');
+  }
+}
+
+#me {
+  position: fixed;
+  z-index: 1000;
 }
 
 .hidden {
