@@ -1,10 +1,21 @@
 .call-me {
-  padding: 15px 20px 15px 20px;
+  position: relative;
+  padding: 15px 0;
   display: flex;
   order: 1;
- // width: 50%;
   width: 100%;
-  background: $primary__black;
+ // background: $primary__black;
+  &:before {
+    position: absolute;
+    content: "";
+    width: 9999px;
+    height: 80px;
+    top: 0;
+    left: -99px;
+    background: #2c2c2c;
+    z-index: -1;
+  }
+
 }
 
 .call-me__icon {
@@ -44,5 +55,17 @@
 
   &:hover {
     color: #fff;
+  }
+}
+
+@media (min-width: 768px) {
+  .call-me {
+ //   padding: 15px 40px;
+  }
+}
+
+@media (min-width: 414px) {
+  .call-me {
+  //  padding-top: 30px;
   }
 }

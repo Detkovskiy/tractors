@@ -38,5 +38,21 @@
 
 .services__img {
   padding-top: 4px;
-  width: 97%;
+  width: 100%;
+}
+
+.services__wrapper {
+
+}
+
+@media (min-width: 768px) {
+  .services__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .services__item {
+    width: 320px;
+  }
 }

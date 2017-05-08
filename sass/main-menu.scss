@@ -44,7 +44,7 @@
 .menu-toggle {
   position: absolute;
   top: 22px;
-  left: 250px;
+  left: 234px;
   content: '';
   width: 50px;
   height: 30px;
@@ -62,4 +62,35 @@
   position: fixed;
   background: #313131;
   z-index: 1001;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    left: 637px;
+  }
+
+  .main-menu {
+    width: 410px;
+    left: 179px;
+  }
+}
+
+@media (min-width: 414px) {
+  .menu-toggle {
+    left: 319px;
+  }
+
+  .main-menu {
+    left: 51px;
+  }
+}
+
+@media (min-width: 375px) {
+  .menu-toggle {
+   left: 300px;
+  }
+
+  .main-menu {
+    left: 50px;
+  }
 }

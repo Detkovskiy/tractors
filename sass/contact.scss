@@ -8,11 +8,6 @@
   align-items: center;
 }
 
-.logo__footer {
-  margin-bottom: 20px;
-  width: 100%;
-}
-
 .contact__info {
   padding: 0;
   list-style: none;
@@ -24,5 +19,12 @@
   & a {
     color: $primary__red;
     font-weight: bold;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }

@@ -2,3 +2,24 @@
   width: 280px;
   height: 200px;
 }
+
+@media (min-width: 768px) {
+  .map {
+    width: 688px;
+    height: 400px;
+  }
+}
+
+@media (min-width: 414px) {
+  .map {
+    width: 374px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 375px) {
+  .map {
+    width: 335px;
+    height: 250px;
+  }
+}

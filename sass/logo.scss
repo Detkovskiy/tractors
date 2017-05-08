@@ -1,10 +1,37 @@
 .logo {
  // margin: 0 0 20px;
-  padding: 0 20px;
+//  padding: 0 20px;
   display: block;
-  width: 320px;
+  text-align: center;
+ // width: 320px;
+}
+
+.logo__footer {
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .logo__img {
   width: 280px;
 }
+
+@media (min-width: 768px) {
+  .logo__footer {
+   // margin-bottom: 20px;
+    width: 45%;
+  }
+}
+
+@media (min-width: 414px) {
+  .logo__img {
+    width: 370px;
+  }
+}
+
+@media (min-width: 375px) {
+  .logo__img {
+    width: 320px;
+  }
+}
+
+

@@ -14,16 +14,13 @@ $(document).ready(function(){
   });
 });
 
-/*---------------------------------------------------------------------------------
- fJumpTo by FRO1D
- Author: Andrey Litvinov (FRO1D)
- Version: 1.1
- ---------------------------------------------------------------------------------*/
-(function(a){a.fn.fJumpTo=function(d){var e=a.extend({speed:500,navExtra:0,beforeScroll:a.noop,onScroll:a.noop,afterScroll:a.noop},d);return this.each(function(){var c=a(this),d=a("nav").outerHeight();a("nav li a").each(function(){a(this).data("navextra",-d+e.navExtra)});c.click(function(){e.beforeScroll(c);var b=c.attr("href"),d=c.closest("section, article, header, footer");switch(b){case "#":case "/":b=0;break;case "#prev":b=d.prev().offset().top;break;case "#next":b=d.next().offset().top;break;default:b=a(b).offset().top}c.data("offset")&&(b+=c.data("offset"));c.data("navextra")&&(b+=c.data("navextra"));a("body, html").animate({scrollTop:b},e.speed);e.onScroll(c);setTimeout(function(){e.afterScroll(c)},e.speed);return!1})})}})(jQuery);
-
-
 var h_hght = 91; // высота шапки
 var h_mrg = 0;    // отступ когда шапка уже не видна
+
+if (document.documentElement.clientWidth > 375) {
+  h_hght = 110;
+}
+
 
 $(function(){
 
