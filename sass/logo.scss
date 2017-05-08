@@ -1,9 +1,6 @@
 .logo {
- // margin: 0 0 20px;
-//  padding: 0 20px;
   display: block;
   text-align: center;
- // width: 320px;
 }
 
 .logo__footer {
@@ -17,8 +14,13 @@
 
 @media (min-width: 768px) {
   .logo__footer {
-   // margin-bottom: 20px;
     width: 45%;
+  }
+}
+
+@media (min-width: 720px) {
+  .logo__footer {
+    width: 56%;
   }
 }
 

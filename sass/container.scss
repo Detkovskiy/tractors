@@ -1,11 +1,13 @@
 .container {
   margin: 0 auto;
- // padding: 0 20px;
   width: 90%;
- // max-width: 320px;
 
   &--header {
     padding: 0;
+  }
+
+  &--banner {
+    margin-bottom: 30px;
   }
 
   &--footer {

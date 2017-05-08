@@ -1,9 +1,9 @@
 .main-menu {
   position: absolute;
+ // margin-left: -140px;
   padding: 20px 0 0;
   top: 56px;
-  left: 20px;
-  width: 280px;
+  width: 100%;
   order: 2;
   list-style: none;
   z-index: 999;
@@ -42,10 +42,8 @@
 }
 
 .menu-toggle {
-  position: absolute;
-  top: 22px;
-  left: 234px;
-  content: '';
+  position: relative;
+  top: 8px;
   width: 50px;
   height: 30px;
   border: none;
@@ -60,37 +58,33 @@
 
 #sub-menu {
   position: fixed;
+  width: 90%;
   background: #313131;
   z-index: 1001;
 }
 
 @media (min-width: 768px) {
   .menu-toggle {
-    left: 637px;
+
   }
 
   .main-menu {
-    width: 410px;
-    left: 179px;
+
   }
 }
 
 @media (min-width: 414px) {
   .menu-toggle {
-    left: 319px;
+
   }
 
-  .main-menu {
-    left: 51px;
-  }
+
 }
 
 @media (min-width: 375px) {
   .menu-toggle {
-   left: 300px;
+
   }
 
-  .main-menu {
-    left: 50px;
-  }
+
 }
