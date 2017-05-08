@@ -1,0 +1,32 @@
+.copyright {
+  margin-bottom: 10px;
+  align-self: center;
+  text-align: center;
+  line-height: 22px;
+  width: 84%;
+}
+
+.footer__nav {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+
+  & li {
+    margin-bottom: 5px;
+    font-weight: bold;
+    background: #eee;
+   // margin-right: 10px;
+  }
+
+  & a {
+    padding: 0 5px;
+    color: $primary__black;
+
+    &:hover {
+      color: #fff;
+      background: $primary__black;
+    }
+  }
+}

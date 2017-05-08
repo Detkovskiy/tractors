@@ -14,6 +14,12 @@ $(document).ready(function(){
   });
 });
 
+/*---------------------------------------------------------------------------------
+ fJumpTo by FRO1D
+ Author: Andrey Litvinov (FRO1D)
+ Version: 1.1
+ ---------------------------------------------------------------------------------*/
+(function(a){a.fn.fJumpTo=function(d){var e=a.extend({speed:500,navExtra:0,beforeScroll:a.noop,onScroll:a.noop,afterScroll:a.noop},d);return this.each(function(){var c=a(this),d=a("nav").outerHeight();a("nav li a").each(function(){a(this).data("navextra",-d+e.navExtra)});c.click(function(){e.beforeScroll(c);var b=c.attr("href"),d=c.closest("section, article, header, footer");switch(b){case "#":case "/":b=0;break;case "#prev":b=d.prev().offset().top;break;case "#next":b=d.next().offset().top;break;default:b=a(b).offset().top}c.data("offset")&&(b+=c.data("offset"));c.data("navextra")&&(b+=c.data("navextra"));a("body, html").animate({scrollTop:b},e.speed);e.onScroll(c);setTimeout(function(){e.afterScroll(c)},e.speed);return!1})})}})(jQuery);
 
 
 var h_hght = 91; // высота шапки
@@ -40,32 +46,29 @@ $(function(){
 
 });
 
-/*// Map
-	ymaps.ready(function(){
+ymaps.ready(init);
 
-		// coords
-		var coords = [59.77691726, 30.14760450];
+function init(){
 
-		// map
-		var yaMap = new ymaps.Map('map', {
-			center: coords,
-			zoom: 16,
-			controls: ['geolocationControl', 'typeSelector', 'fullscreenControl', 'zoomControl']
-		});
-		yaMap.behaviors.disable(['scrollZoom']);
+  var myMap;
 
-		// placemark
-		var yaPlacemark = new ymaps.Placemark(
-			coords, {
-				iconContent: 'Заречная улица, 2'
-			},
-			{
-				preset: 'islands#blueStretchyIcon'
-			}
-		);
-		yaMap.geoObjects.add(yaPlacemark);
+  myMap = new ymaps.Map("map", {
+    center: [59.7782, 30.1479],
+    zoom: 15,
+    controls: []
+  });
 
-  });*/
+  myMap.behaviors.disable('scrollZoom');
+
+  var myPlacemark = new ymaps.Placemark([59.7770, 30.1450] , {},
+    { iconLayout: 'default#image',
+      iconImageHref: 'img/icon-map-pin.svg',
+      iconImageSize: [230, 146],
+      iconImageOffset: [-45, -147] });
+
+  myMap.geoObjects.add(myPlacemark);
+
+}
 
 
 /*
