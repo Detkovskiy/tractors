@@ -34,7 +34,7 @@
 
   <title>Трактовичкоф | Аренда спецтехники в СПб</title>
 </head>
-<body>
+<body onresize="myFunction()">
 <header id="top_nav">
   <div class="container  container--header">
     <a href="#" class="logo">
@@ -74,12 +74,72 @@
 </div>
 
 <div class="container  container--banner">
+  <picture>
+    <!--<source media="(min-width: 2000px)" srcset="img/gallery/arenda-jamobura@2x.jpg 1x, img/gallery/arenda-jamobura@big-2x.jpg 2x,">
+    <source media="(min-width: 769px)" srcset="img/gallery/arenda-jamobura@1x.jpg 1x, img/gallery/arenda-jamobura@2x.jpg 2x,">-->
+    <img class="background-tooltips" src="img/banner@1x.jpg" srcset="img/banner@2x.jpg 2x" alt="Трактовичков - аренда техники">
+  </picture>
+  <ul class="block-tooltips">
+    <li class="tooltip  tooltip--rachistka">
+      <span class="tooltip-toggle"></span>
+      <div class="tooltip-content">
+        <h5 class="tooltip-title">Расчистка участка</h5>
+        <p class="tooltip-text">Удаление деревьев, пней и кустарника</p>
+      </div>
+    </li>
+    <li class="tooltip  tooltip--byrenie">
+      <span class="tooltip-toggle"></span>
+      <div class="tooltip-content">
+        <h5 class="tooltip-title">Буровые работы</h5>
+        <p class="tooltip-text">Создание лунок под элементы фундаментов, заборов, опор</p>
+      </div>
+    </li>
+    <li class="tooltip  tooltip--viravnivanie">
+      <span class="tooltip-toggle"></span>
+      <div class="tooltip-content">
+        <h5 class="tooltip-title">Выравнивание земельного участка</h5>
+        <p class="tooltip-text">Планировка земельного участка</p>
+      </div>
+    </li>
+    <li class="tooltip  tooltip--drenaj">
+      <span class="tooltip-toggle"></span>
+      <div class="tooltip-content">
+        <h5 class="tooltip-title">Дренаж дачного участка</h5>
+        <p class="tooltip-text">Отведение излишков талых вод и осадков от дома и сада</p>
+      </div>
+    </li>
+    <li class="tooltip  tooltip--mojenie">
+      <span class="tooltip-toggle"></span>
+      <div class="tooltip-content">
+        <h5 class="tooltip-title">Мощение тротуарной плиткой</h5>
+        <p class="tooltip-text">Устройство площадки под автотранспорт</p>
+      </div>
+    </li>
+    <li class="tooltip  tooltip--fundament">
+      <span class="tooltip-toggle"></span>
+      <div class="tooltip-content">
+        <h5 class="tooltip-title">Сооружение фундамента</h5>
+        <p class="tooltip-text">Рытье котлованов и траншей, вывоз и утилизация грунта</p>
+      </div>
+    </li>
+    <li class="tooltip  tooltip--crane">
+      <span class="tooltip-toggle"></span>
+      <div class="tooltip-content">
+        <h5 class="tooltip-title">Высотные работы</h5>
+        <p class="tooltip-text">Погрузо-разгрузочные работы, подъем грузов на высоту</p>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<!--
+<div class="container  container&#45;&#45;banner">
   <div id="banner" class="twentytwenty-container">
     <img src="img/viravnivanie-ychastka-spb-b@2x.jpg" />
     <img src="img/viravnivanie-ychastka-spb@2x.jpg" />
   </div>
 </div>
-
+-->
 
 
 <section id="assortment">
@@ -472,9 +532,9 @@
 
         <div>
           <picture>
-            <!--<source media="(min-width: 2000px)" srcset="img/gallery/arenda-jamobura@2x.jpg 1x, img/gallery/arenda-jamobura@big-2x.jpg 2x,">
-            <source media="(min-width: 769px)" srcset="img/gallery/arenda-jamobura@1x.jpg 1x, img/gallery/arenda-jamobura@2x.jpg 2x,">-->
-            <img class="services__img" src="img/services/arenda-stroitelnoi-techniki@1x.jpg" srcset="img/services/arenda-stroitelnoi-techniki@2x.jpg 2x," alt="буровые работы">
+            <!--<source media="(min-width: 2000px)" srcset="img/gallery/arenda-jamobura@2x.jpg 1x, img/gallery/arenda-jamobura@big-2x.jpg 2x,">-->
+            <source media="(min-width: 769px)" srcset="img/services/arenda-stroitelnoi-techniki@1x.jpg 1x, img/services/arenda-stroitelnoi-techniki@2x.jpg 2x">
+            <img class="services__img" src="img/services/arenda-stroitelnoi-techniki@1x-mobile.jpg" srcset="img/services/arenda-stroitelnoi-techniki@2x-mobile.jpg 2x," alt="Аренда строительной техники">
           </picture>
         </div>
 
@@ -493,9 +553,9 @@
 
         <div>
           <picture>
-            <!--<source media="(min-width: 2000px)" srcset="img/gallery/arenda-jamobura@2x.jpg 1x, img/gallery/arenda-jamobura@big-2x.jpg 2x,">
-            <source media="(min-width: 769px)" srcset="img/gallery/arenda-jamobura@1x.jpg 1x, img/gallery/arenda-jamobura@2x.jpg 2x,">-->
-            <img class="services__img" src="img/services/landchaftnie-raboti@1x.jpg" srcset="img/services/landchaftnie-raboti@2x.jpg 2x," alt="буровые работы">
+            <!--<source media="(min-width: 2000px)" srcset="img/gallery/arenda-jamobura@2x.jpg 1x, img/gallery/arenda-jamobura@big-2x.jpg 2x,">-->
+            <source media="(min-width: 769px)" srcset="img/services/landchaftnie-raboti@1x.jpg 1x, img/services/landchaftnie-raboti@2x.jpg 2x,">
+            <img class="services__img" src="img/services/landchaftnie-raboti@1x-mobile.jpg" srcset="img/services/landchaftnie-raboti@2x-mobile.jpg 2x," alt="Аренда техники для ландшафтных работ">
           </picture>
         </div>
 
@@ -513,9 +573,9 @@
 
         <div>
           <picture>
-            <!--<source media="(min-width: 2000px)" srcset="img/gallery/arenda-jamobura@2x.jpg 1x, img/gallery/arenda-jamobura@big-2x.jpg 2x,">
-            <source media="(min-width: 769px)" srcset="img/gallery/arenda-jamobura@1x.jpg 1x, img/gallery/arenda-jamobura@2x.jpg 2x,">-->
-            <img class="services__img" src="img/services/uborka-snega-spb@1x.jpg" srcset="img/services/uborka-snega-spb@2x.jpg 2x," alt="буровые работы">
+            <!--<source media="(min-width: 2000px)" srcset="img/gallery/arenda-jamobura@2x.jpg 1x, img/gallery/arenda-jamobura@big-2x.jpg 2x,">-->
+            <source media="(min-width: 769px)" srcset="img/services/uborka-snega-spb@1x.jpg 1x, img/services/uborka-snega-spb@2x.jpg 2x,">
+            <img class="services__img" src="img/services/uborka-snega-spb@1x-mobile.jpg" srcset="img/services/uborka-snega-spb@2x-mobile.jpg 2x," alt="Техника для уборки снега">
           </picture>
         </div>
 
@@ -527,15 +587,15 @@
       <div class="services__item">
         <div class="services__description">
           <h3 class="services__title">Ландшафтные работы</h3>
-          <p>Разработка котлованов, рытьё траншей, подготовка под фундамент, планирование и выравнивание участков, вывоз и погрузка песка, снега, благоустройство, коммуникации, перемещение грузов по строительной площадке, канализация, вода на участки, вывоз грунта.
+          <p>Разработка котлованов, рытьё траншей, подготовка под фундамент, планирование и выравнивание участков, вывоз и погрузка песка, снега, благоустройство, коммуникации, перемещение грузов по строительной площадке, канализация, вода на участки.
           </p>
         </div>
 
         <div>
           <picture>
-            <!--<source media="(min-width: 2000px)" srcset="img/gallery/arenda-jamobura@2x.jpg 1x, img/gallery/arenda-jamobura@big-2x.jpg 2x,">
-            <source media="(min-width: 769px)" srcset="img/gallery/arenda-jamobura@1x.jpg 1x, img/gallery/arenda-jamobura@2x.jpg 2x,">-->
-            <img class="services__img" src="img/services/zemlynie-raboti@1x.jpg" srcset="img/services/zemlynie-raboti@2x.jpg 2x," alt="буровые работы">
+            <!--<source media="(min-width: 2000px)" srcset="img/gallery/arenda-jamobura@2x.jpg 1x, img/gallery/arenda-jamobura@big-2x.jpg 2x,">-->
+            <source media="(min-width: 769px)" srcset="img/services/zemlynie-raboti@1x.jpg 1x, img/services/zemlynie-raboti@2x.jpg 2x,">
+            <img class="services__img" src="img/services/zemlynie-raboti@1x-mobile.jpg" srcset="img/services/zemlynie-raboti@2x-mobile.jpg 2x," alt="Буровые работы">
           </picture>
         </div>
 
@@ -1262,7 +1322,7 @@
       <img class="logo__footer" src="img/logo-footer.svg" alt="">
       <ul class="contact__info">
         <li>Город: Санкт-Петербург</li>
-        <li>Улица: ул. Заречная д. 2</li>
+        <li>Улица: Заречная дом 2</li>
         <li>Тел.: <a href="tel:9002460">(812) 900-24-60</a></li>
         <li>Тел.: <a href="tel:89219002460">+7 (921) 900-24-60</a></li>
         <li>Почта: <a href="tel:89219002460">info@traktovichkoff.ru2</a></li>
@@ -1288,7 +1348,7 @@
       <li><a href="#assortment">Техника</a></li>
       <li><a href="#services">Услуги</a></li>
       <li><a href="#price">Прайс</a></li>
-      <li><a href="#partnership">Сотрудничество</a></li>
+     <!-- <li><a href="#partnership">Сотрудничество</a></li>-->
       <li><a href="#contacts">Контакты</a></li>
     </ul>
 

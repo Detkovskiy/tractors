@@ -1,0 +1,167 @@
+.background-tooltips {
+  width: 100%;
+}
+
+.block-tooltips {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  list-style: none;
+}
+
+.tooltip {
+  position: absolute;
+
+  &--rachistka {
+    top: 300px;
+    left: 210px;
+  }
+
+  &--byrenie {
+    top: 427px;
+    left: 356px;
+  }
+
+  &--viravnivanie {
+    top: 465px;
+    left: 460px;
+  }
+
+  &--drenaj {
+    top: 515px;
+    left: 65px;
+  }
+
+  &--mojenie {
+    top: 530px;
+    left: 850px;
+  }
+
+  &--fundament {
+    top: 425px;
+    left: 585px;
+  }
+
+  &--crane {
+    top: 122px;
+    left: 736px;
+  }
+}
+
+.tooltip-toggle {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ff4f59;
+
+  &::after {
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    content: "";
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ff4f59;
+    border-radius: 50%;
+    transition: all 0.3s;
+  }
+
+  &:hover::after {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+.tooltip-content {
+  position: absolute;
+  top: -9px;
+  left: 38px;
+  width: 260px;
+  display: block;
+  opacity: 0;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: translate3d(-10px, 0, 0);
+  transition: all 0.3s;
+  pointer-events: none;
+  z-index: 100;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    top: 10px;
+    left: -6px;
+    border-radius: 2px;
+  }
+}
+
+.tooltip-toggle:hover + .tooltip-content {
+  transform: translate3d(0,0,0);
+  opacity: 1;
+}
+
+.tooltip-title {
+  margin: 0;
+  padding: 10px 14px;
+  font-weight: normal;
+}
+
+.tooltip-text {
+  margin: 0;
+  padding: 10px 14px;
+  background-color: #f9f9f9;
+  font-weight: 100;
+  color: #778aa0;
+  border-radius: 0 0 2px 2px;
+}
+/*
+
+@media (max-width: 768px) {
+  .tooltip {
+    position: absolute;
+    cursor: pointer;
+
+    &--rachistka {
+      top: 160px;
+      left: 119px;
+    }
+
+    &--byrenie {
+      top: 237px;
+      left: 200px;
+    }
+
+    &--viravnivanie {
+      top: 257px;
+      left: 270px;
+    }
+
+    &--drenaj {
+      top: 295px;
+      left: 40px;
+    }
+
+    &--mojenie {
+      top: 300px;
+      left: 420px;
+    }
+
+    &--fundament {
+      top: 235px;
+      left: 335px;
+    }
+
+    &--crane {
+      top: 62px;
+      left: 426px;
+    }
+  }
+}
+*/

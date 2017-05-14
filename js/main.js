@@ -67,27 +67,6 @@ function init(){
 
 }
 
-
-/*
- $(document).ready(function(){
- // = Вешаем событие прокрутки к нужному месту
- //	 на все ссылки якорь которых начинается на #
- $('a[href^="#"]').bind('click.smoothscroll',function (e) {
- e.preventDefault();
-
- var target = this.hash,
- $target = $(target);
-
- $('html, body').stop().animate({
- 'scrollTop': $target.offset().top - 150
- }, 900, 'swing', function () {
- window.location.hash = target;
- });
- });
-
- });*/
-
-
 var topMenu = document.querySelector('#menu');
 var toggleMenu = document.querySelector('.menu-toggle');
 var mainMenu = document.querySelector('.main-menu');
@@ -159,68 +138,52 @@ var openCallBack = (function () {
         }
       });
 
-      /*document.addEventListener('click', function () {
 
-       mainMenu.classList.add('hidden');
-
-       });*/
     } else {
       modalCallback.classList.add('hidden');
     }
   });
 })();
 
-/*
 
 
 
-var openCallBack = (function () {
-  toggleMenu.addEventListener('click', function () {
-    if (mainMenu.classList.contains('hidden')) {
-      mainMenu.classList.remove('hidden');
-      mainMenu.setAttribute('style', 'top:' + sizeTopMenu($(window).scrollTop()) + 'px;');
-      console.log($(window).scrollTop());
-      document.addEventListener('keydown', function (evt) {
-        if (evt.keyCode === 27) {
-          mainMenu.classList.add('hidden');
-        }
-      });
-      /!*document.addEventListener('click', function () {
+var qw = function (size) {
 
-       mainMenu.classList.add('hidden');
+  var list = document.querySelector('.tooltip--rachistka');
+  var qaw = 300 - size + "px";
+  list.style.top= qaw;
+  console.log(qaw + ' a');
+};
 
-       });*!/
-    } else {
-      mainMenu.classList.add('hidden');
-    }
-  });
-})();
-*/
+function qwe() {
+  var list = document.querySelector('.tooltip--rachistka');
+  var w = (1300 - document.documentElement.clientWidth) / 4;
+  var qaw = 300 - w + "px";
+  list.style.top= qaw;
+  console.log(qaw + ' vvv');
+}
 
+document.addEventListener("DOMContentLoaded", qwe);
 
-/*
-
-var openAnyBlock = (function () {
-  for (var i = 0; i < objectClick.length; i++) {
-    objectClick[i].nameToggle.addEventListener('click', function (evt) {
-      var indexPin = evt.currentTarget.getAttribute('data-index');
-      if (objectClick[indexPin].openBlock.classList.contains('hidden')) {
-        objectClick[indexPin].openBlock.classList.remove('hidden');
-        objectClick[indexPin].openBlock.setAttribute('style', 'top:' + sizeTopMenu($(window).scrollTop()) + 'px;');
-        console.log($(window).scrollTop());
-        document.addEventListener('keydown', function (evt) {
-          if (evt.keyCode === 27) {
-            objectClick[indexPin].openBlock.classList.add('hidden');
-          }
-        })
-      } else {
-        objectClick[indexPin].openBlock.classList.add('hidden');
-      }
-    });
+function myFunction() {
+  var asd = document.documentElement.clientWidth;
+  var w = (1300 - document.documentElement.clientWidth) / 4;
+  var list = document.querySelector('.tooltip--rachistka');
+  if (asd < 1300) {
+    qw(w);
+  } if (asd > 1300) {
+    list.style.top= 300 + "px";
+  } if (asd < 800) {
+    list.style.left= 112 + "px";
   }
-})();
+}
 
-*/
+
+
+
+
+
 
 
 jQuery(function($){

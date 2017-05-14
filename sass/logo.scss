@@ -12,6 +12,12 @@
   width: 280px;
 }
 
+@media (min-width: 1000px) {
+  .logo__img {
+    width: 330px;
+  }
+}
+
 @media (min-width: 768px) {
   .logo__footer {
     width: 45%;
