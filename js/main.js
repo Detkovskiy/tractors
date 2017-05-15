@@ -171,37 +171,41 @@ var openCallBack = (function () {
 
 
 
-var qw = function (size) {
-  var list = document.querySelector('.tooltip--rachistka');
-  var qaw = 300 - size + "px";
-  list.style.top= qaw;
-  console.log(qaw + ' a');
-};
+
 
 /* при загрузке */
 function qwe() {
   var list = document.querySelector('.tooltip--rachistka');
-  var w = (1300 - document.documentElement.clientWidth) / 4;
-  var qaw = 260 - w + "px";
-  list.style.top= qaw;
-  list.style.left= 200 + "px";
-  console.log(qaw + ' vvv');
+  var clientWidth = document.documentElement.clientWidth;
+
+  if (clientWidth > 1200) {
+    list.style.top= 315 + "px";
+    list.style.left= 265 + "px";
+  } else {
+    list.style.top= Math.ceil((295 * clientWidth)/1200) + "px";
+    list.style.left= Math.ceil((265 * (Math.ceil(650/(1200/clientWidth))))/650) + "px";
+  }
 }
 
 document.addEventListener("DOMContentLoaded", qwe);
 
-function myFunction() {
-  var asd = document.documentElement.clientWidth;
-  var w = (1300 - document.documentElement.clientWidth) / 4;
-  var list = document.querySelector('.tooltip--rachistka');
-  if (asd < 1300) {
-    qw(w);
-  } if (asd > 1300) {
-    list.style.top= 300 + "px";
-  } if (asd < 800) {
-    list.style.left= 112 + "px";
+var cordTooltip = function (size, item) {
+  item.style.top= Math.ceil((291 * size)/1200) + "px";
+  var height = Math.ceil(650/(1200/size));
+  item.style.left= Math.ceil((265 * height)/650) + "px";
+};
+
+var myFunction = function () {
+  var clientWidth = document.documentElement.clientWidth;
+  var item = document.querySelector('.tooltip--rachistka');
+
+  if (clientWidth < 1300) {
+    cordTooltip(clientWidth, item);
+  } else {
+    item.style.top= 315 + "px";
+    item.style.left= 265 + "px";
   }
-}
+};
 
 
 
