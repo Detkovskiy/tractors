@@ -1,3 +1,5 @@
+"use strict";
+
 $(document).ready(function(){
   $("#menu").on("click","a", function (event) {
     //отменяем стандартную обработку нажатия по ссылке
@@ -169,41 +171,79 @@ var openCallBack = (function () {
 })();
 
 
-
-
-
+var arrcordTooltips = [
+  {
+    name: 'rachistka',
+    top: 315,
+    left: 265
+  },
+  {
+    name: 'byrenie',
+    top: 445,
+    left: 355
+  },
+  {
+    name: 'viravnivanie',
+    top: 475,
+    left: 465
+  },
+  {
+    name: 'drenaj',
+    top: 535,
+    left: 80
+  },
+  {
+    name: 'mojenie',
+    top: 535,
+    left: 900
+  },
+  {
+    name: 'fundament',
+    top: 440,
+    left: 580
+  },
+  {
+    name: 'crane',
+    top: 160,
+    left: 720
+  }
+];
 
 /* при загрузке */
 function qwe() {
-  var list = document.querySelector('.tooltip--rachistka');
   var clientWidth = document.documentElement.clientWidth;
+  var toolList = document.querySelectorAll('.tooltip');
 
-  if (clientWidth > 1200) {
-    list.style.top= 315 + "px";
-    list.style.left= 265 + "px";
-  } else {
-    list.style.top= Math.ceil((295 * clientWidth)/1200) + "px";
-    list.style.left= Math.ceil((265 * (Math.ceil(650/(1200/clientWidth))))/650) + "px";
+  for (var i = 0; i < toolList.length; i++ ) {
+    if (clientWidth > 1200) {
+      toolList[i].style.top = arrcordTooltips[i].top + "px";
+      toolList[i].style.left = arrcordTooltips[i].left + "px";
+    } else {
+      toolList[i].style.top = Math.ceil(((arrcordTooltips[i].top - 45) * clientWidth)/1200) + "px";
+      toolList[i].style.left = Math.ceil(((arrcordTooltips[i].left - 40) * (Math.ceil(650/(1200/clientWidth))))/650) + "px";
+    }
   }
 }
 
 document.addEventListener("DOMContentLoaded", qwe);
 
-var cordTooltip = function (size, item) {
-  item.style.top= Math.ceil((291 * size)/1200) + "px";
+var cordTooltip = function (size, item, i) {
+  item.style.top= Math.ceil(((arrcordTooltips[i].top - 45) * size)/1200) + "px";
   var height = Math.ceil(650/(1200/size));
-  item.style.left= Math.ceil((265 * height)/650) + "px";
+  item.style.left= Math.ceil(((arrcordTooltips[i].left - 40) * height)/650) + "px";
 };
 
-var myFunction = function () {
+var tooltips = function () {
   var clientWidth = document.documentElement.clientWidth;
-  var item = document.querySelector('.tooltip--rachistka');
+  var toolList = document.querySelectorAll('.tooltip');
 
-  if (clientWidth < 1300) {
-    cordTooltip(clientWidth, item);
-  } else {
-    item.style.top= 315 + "px";
-    item.style.left= 265 + "px";
+  for (var i = 0; i < toolList.length; i++ ) {
+    if (clientWidth < 1300) {
+      cordTooltip(clientWidth, toolList[i], i);
+    } else {
+      toolList[i].style.top= arrcordTooltips[i].top + "px";
+      toolList[i].style.left= arrcordTooltips[i].left + "px";
+    }
   }
 };
 

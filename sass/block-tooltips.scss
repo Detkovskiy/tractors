@@ -1,168 +1,146 @@
 .background-tooltips {
-  width: 100%;
+  display: none;
 }
 
 .block-tooltips {
-  margin: 0;
+  margin: 20px 0 0 0;
   padding: 0;
   width: 100%;
-  top: 0;
   list-style: none;
 }
 
-.tooltip {
-  position: absolute;
-
-  /*&--rachistka {
-    top: 300px;
-    left: 210px;
-  }*/
-
-  &--byrenie {
-    top: 427px;
-    left: 356px;
-  }
-
-  &--viravnivanie {
-    top: 465px;
-    left: 460px;
-  }
-
-  &--drenaj {
-    top: 515px;
-    left: 65px;
-  }
-
-  &--mojenie {
-    top: 530px;
-    left: 850px;
-  }
-
-  &--fundament {
-    top: 425px;
-    left: 585px;
-  }
-
-  &--crane {
-    top: 122px;
-    left: 736px;
-  }
-}
-
 .tooltip-toggle {
-  position: relative;
-  display: block;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: #ff4f59;
-
-  &::after {
-    position: absolute;
-    top: -6px;
-    left: -6px;
-    content: "";
-    width: 24px;
-    height: 24px;
-    border: 2px solid #ff4f59;
-    border-radius: 50%;
-    transition: all 0.3s;
-  }
-
-  &:hover::after {
-    transform: scale(1.2);
-    opacity: 0.6;
-  }
+  display: none;
 }
 
 .tooltip-content {
-  position: absolute;
-  top: -9px;
-  left: 38px;
-  width: 260px;
-  display: block;
-  opacity: 0;
-  background-color: #fff;
-  border-radius: 3px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transform: translate3d(-10px, 0, 0);
-  transition: all 0.3s;
-  pointer-events: none;
-  z-index: 100;
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 14px;
-    height: 14px;
-    background-color: #fff;
-    transform: rotate(45deg);
-    top: 10px;
-    left: -6px;
-    border-radius: 2px;
-  }
-}
-
-.tooltip-toggle:hover + .tooltip-content {
-  transform: translate3d(0,0,0);
-  opacity: 1;
+  margin-bottom: 20px;
 }
 
 .tooltip-title {
   margin: 0;
-  padding: 10px 14px;
+  padding: 10px 10px;
   font-weight: normal;
+  background: #fff;
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 18px;
 }
 
 .tooltip-text {
   margin: 0;
-  padding: 10px 14px;
-  background-color: #f9f9f9;
+  padding: 10px 10px;
   font-weight: 100;
   color: #778aa0;
-  border-radius: 0 0 2px 2px;
-}
-/*
+  font-size: 17px;
+  line-height: 17px;
 
-@media (max-width: 768px) {
+}
+
+@media (min-width: 768px) {
+  .background-tooltips {
+    display: block;
+    width: 100%;
+  }
+
+  .block-tooltips {
+    margin: 0;
+    top: 0;
+  }
+
   .tooltip {
     position: absolute;
-    cursor: pointer;
+  }
 
-    &--rachistka {
-      top: 160px;
-      left: 119px;
+  .tooltip-toggle {
+    position: relative;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ff4f59;
+
+    &::after {
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      content: "";
+      width: 24px;
+      height: 24px;
+      border: 2px solid #ff4f59;
+      border-radius: 50%;
+      transition: all 0.3s;
     }
 
-    &--byrenie {
-      top: 237px;
-      left: 200px;
-    }
-
-    &--viravnivanie {
-      top: 257px;
-      left: 270px;
-    }
-
-    &--drenaj {
-      top: 295px;
-      left: 40px;
-    }
-
-    &--mojenie {
-      top: 300px;
-      left: 420px;
-    }
-
-    &--fundament {
-      top: 235px;
-      left: 335px;
-    }
-
-    &--crane {
-      top: 62px;
-      left: 426px;
+    &:hover::after {
+      transform: scale(1.2);
+      opacity: 0.6;
     }
   }
+
+  .tooltip-content {
+    margin-bottom: 0;
+    position: absolute;
+    top: -9px;
+    left: 38px;
+    width: 260px;
+    display: block;
+    opacity: 0;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transform: translate3d(-10px, 0, 0);
+    transition: all 0.3s;
+    pointer-events: none;
+    z-index: 100;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 14px;
+      height: 14px;
+      background-color: #fff;
+      transform: rotate(45deg);
+      top: 10px;
+      left: -6px;
+      border-radius: 2px;
+    }
+
+    &--left {
+      left: -284px;
+      text-align: right;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 14px;
+        height: 14px;
+        background-color: #fff;
+        transform: rotate(45deg);
+        top: 10px;
+        left: 252px;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  .tooltip-toggle:hover + .tooltip-content {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  .tooltip-title {
+    padding: 10px 14px;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 13px;
+  }
+
+  .tooltip-text {
+    padding: 10px 14px;
+    background-color: #f9f9f9;
+    border-radius: 0 0 2px 2px;
+    font-size: 15px;
+    line-height: 15px;
+  }
 }
-*/

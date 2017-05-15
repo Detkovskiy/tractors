@@ -26,6 +26,10 @@
     border: 1px solid #a0a0a0;
     //width: 22.333333%;
   }
+
+  &--hidden {
+    display: none;
+  }
 }
 
 p.table__title {
@@ -37,8 +41,13 @@ p.table__title {
   letter-spacing: 1px;
   font-weight: bold;
 
+
   &:first-of-type {
     margin-top: 20px;
+  }
+
+  &--hidden {
+    display: none;
   }
 }
 
@@ -105,6 +114,22 @@ p.table__title {
         padding: 0 8px;
         background: #eee;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .responsive__table-works {
+
+    &--hidden {
+      display: inline-table;
+    }
+  }
+
+  p.table__title {
+
+    &--hidden {
+      display: block;
     }
   }
 }

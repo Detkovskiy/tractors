@@ -2,7 +2,7 @@
  padding: 40px 20px;
 
   & h1 {
-    margin: 0;
+    margin: 20px 0 40px;
     font: 48px/50px Cuprum;
     font-weight: bold;
     text-align: center;
@@ -13,6 +13,10 @@
     margin-bottom: 8px;
     border-bottom: 8px solid $primary__red;
   }
+}
+
+.main-title__text {
+
 }
 
 @media (min-width: 1000px) {

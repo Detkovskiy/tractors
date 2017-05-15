@@ -9,6 +9,8 @@ a {
 body {
   background: url('../img/backgrounds/bg-body.jpg');
   color: $primary__black;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 header {
@@ -26,6 +28,10 @@ header {
     top: 0;
     z-index: 1002;
   }
+}
+
+.bg {
+  background: #f9f9f9;
 }
 
 h2  {
