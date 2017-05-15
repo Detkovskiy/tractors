@@ -14,3 +14,9 @@
     border-bottom: 8px solid $primary__red;
   }
 }
+
+@media (min-width: 1000px) {
+  .main-title  {
+    margin-top: 96px;
+  }
+}

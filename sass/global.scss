@@ -21,7 +21,10 @@ header {
 
 @media (min-width: 1000px) {
   header {
-    padding: 0;
+    position: fixed;
+    padding: 5px 0;
+    top: 0;
+    z-index: 1002;
   }
 }
 

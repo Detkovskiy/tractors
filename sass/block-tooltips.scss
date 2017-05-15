@@ -3,7 +3,8 @@
 }
 
 .block-tooltips {
-  position: absolute;
+  margin: 0;
+  padding: 0;
   width: 100%;
   top: 0;
   list-style: none;
@@ -12,10 +13,10 @@
 .tooltip {
   position: absolute;
 
-  &--rachistka {
+  /*&--rachistka {
     top: 300px;
     left: 210px;
-  }
+  }*/
 
   &--byrenie {
     top: 427px;

@@ -10,7 +10,7 @@ $(document).ready(function(){
       top = $(id).offset().top;
 
     //анимируем переход на расстояние - top за 1500 мс
-    $('body,html').animate({scrollTop: (top - 91)}, 900);
+    $('body,html').animate({scrollTop: (top - 110)}, 900);
   });
 });
 
@@ -20,7 +20,6 @@ var h_mrg = 0;    // отступ когда шапка уже не видна
 if (document.documentElement.clientWidth > 375) {
   h_hght = 110;
 }
-
 
 $(function(){
 
@@ -42,6 +41,30 @@ $(function(){
   });
 
 });
+
+var h_nav = 0; // высота шапки
+var h_mrgNav = 0;    // отступ когда шапка уже не видна
+$(function(){
+
+  var elem = $('#top_nav');
+  var top = $(this).scrollTop();
+
+  if(top > h_nav){
+    elem.css('top', h_mrgNav);
+  }
+
+  $(window).scroll(function(){
+    top = $(this).scrollTop();
+
+    if (top+h_mrg < h_nav) {
+      elem.css('top', (h_nav-top));
+    } else {
+      elem.css('top', h_mrgNav);
+    }
+  });
+
+});
+
 
 ymaps.ready(init);
 
@@ -149,18 +172,19 @@ var openCallBack = (function () {
 
 
 var qw = function (size) {
-
   var list = document.querySelector('.tooltip--rachistka');
   var qaw = 300 - size + "px";
   list.style.top= qaw;
   console.log(qaw + ' a');
 };
 
+/* при загрузке */
 function qwe() {
   var list = document.querySelector('.tooltip--rachistka');
   var w = (1300 - document.documentElement.clientWidth) / 4;
-  var qaw = 300 - w + "px";
+  var qaw = 260 - w + "px";
   list.style.top= qaw;
+  list.style.left= 200 + "px";
   console.log(qaw + ' vvv');
 }
 
