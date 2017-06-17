@@ -1,12 +1,13 @@
 .main-title {
- padding: 40px 20px;
+ padding: 40px 0;
 
   & h1 {
     margin: 20px 0 40px;
-    font: 48px/50px Cuprum;
-    font-weight: bold;
+    font: 48px/50px VolvoBroadProDigital;
+    letter-spacing: 1px;
     text-align: center;
     text-transform: uppercase;
+    color: #4d4e53;
   }
 
   &--border {
@@ -15,12 +16,85 @@
   }
 }
 
-.main-title__text {
+.main-title__span {
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+  font-size: 48px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #4d4e53;
+  font-family: VolvoBroadProDigital;
 
+  &--small {
+    margin-bottom: 20px;
+    font-size: 32px;
+    line-height: 34px;
+  }
+}
+
+.main-title__list {
+  & li {
+    padding-bottom: 10px;
+  }
+
+  & li:last-child {
+    padding-bottom: 0;
+  }
 }
 
 @media (min-width: 1000px) {
   .main-title  {
     margin-top: 96px;
+  }
+
+  .main-title__span   {
+    font-size: 51px;
+
+    &--small {
+      margin-bottom: 40px;
+      font-size: 34px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .main-title__span   {
+    font-size: 48px;
+
+    &--small {
+      font-size: 32px;
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  .main-title__span   {
+    font-size: 44px;
+
+    &--small {
+      font-size: 29px;
+    }
+  }
+}
+
+@media (min-width: 414px) {
+  .main-title__span   {
+    margin-bottom: 0;
+    font-size: 40px;
+
+    &--small {
+      font-size: 26px;
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .main-title__span   {
+    font-size: 36px;
+
+    &--small {
+      font-size: 34px;
+    }
   }
 }

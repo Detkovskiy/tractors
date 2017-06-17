@@ -26,7 +26,9 @@
   & a {
     padding: 15px 0 15px 30px;
     display: block;
-    font: 22px/24px Cuprum;
+    font-size: 26px;
+    font-family: VolvoBroadProDigital;
+    letter-spacing: 1px;
     color: $primary__black;
     cursor: pointer;
 
@@ -77,7 +79,8 @@
     }
 
     & a {
-      font: 22px/24px Cuprum;
+      font-size: 34px;
+      letter-spacing: 1px;
       color: #fff;
       cursor: pointer;
 
@@ -88,28 +91,21 @@
   }
 }
 
-@media (min-width: 768px) {
-  .menu-toggle {
-
-  }
-
+@media (min-width: 1080px) {
   .main-menu {
 
+    & a {
+      padding: 15px 0 15px 30px;
+    }
   }
 }
 
-@media (min-width: 414px) {
-  .menu-toggle {
+@media (min-width: 1024px) {
+  .main-menu {
 
+    & a {
+      padding: 15px 0 15px 20px;
+    }
   }
-
-
 }
 
-@media (min-width: 375px) {
-  .menu-toggle {
-
-  }
-
-
-}

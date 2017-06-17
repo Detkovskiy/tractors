@@ -18,10 +18,12 @@
 .button {
   padding: 10px 20px;
   align-self: center;
-  text-transform: uppercase;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
-  background-color: $primary__red;
+  font-size: 27px;
+  color: #4d4e53;
+ // text-shadow: 1px 1px 1px #000;
+  background-color: #fcd81d;
+  font-family: 'VolvoBroadProDigital';
+  letter-spacing: 1px;
   border-radius: 4px;
 
   &:hover {
@@ -32,6 +34,7 @@
 
   &--services {
     padding: 5px 10px;
+    font-size: 20px;
     text-shadow: none;
     text-transform: none;
     border-radius: 0;

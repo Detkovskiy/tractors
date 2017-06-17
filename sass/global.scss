@@ -34,12 +34,38 @@ header {
   background: #f9f9f9;
 }
 
+.phone-in-text {
+  font-size: 34px;
+  line-height: 36px;
+  color: #4d4e53;
+  font-family: 'VolvoBroadProDigital';
+  letter-spacing: 2px;
+}
+
+@media (min-width: 768px) {
+  .phone-in-text {
+    &--block {
+      display: inherit;
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .phone-in-text {
+    &--block {
+      display: block;
+    }
+  }
+}
+
 h2  {
   margin: 0 0 20px;
-  font: 700 27px/40px MyriadProCond;
+  font-size: 40px;
+  line-height: 33px;
+  color: #4d4e53;
+  font-family: 'VolvoBroadProDigital';
   text-transform: uppercase;
-  letter-spacing: 0.8px;
-  color: #000;
+  letter-spacing: 2px;
   background: url('../img/backgrounds/h2_bg.svg') 14px 9px repeat-x;
   background-size: 8px;
 
@@ -129,4 +155,9 @@ h2  {
   url('../fonts/MyriadProCondIt.svg') format('svg');
   font-weight: 700;
   font-style:  italic;
+}
+
+@font-face {
+  font-family: 'VolvoBroadProDigital';
+  src: url('../fonts/VolvoBroadProDigital-webfont.woff') format('woff');
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 187.6 95.5" style="enable-background:new 0 0 187.6 95.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.28;fill:url(#XMLID_36_);}
+	.st1{fill:#FCD81D;}
+	.st2{opacity:0.4;fill:url(#XMLID_76_);}
+	.st3{fill:#4D4E53;}
+	.st4{font-family:'OpenSans-Bold';}
+	.st5{font-size:24.4197px;}
+</style>
+<g id="XMLID_2_">
+	<g id="XMLID_4_">
+		<g id="XMLID_7_">
+			
+				<radialGradient id="XMLID_36_" cx="5.9803" cy="128.0648" r="11.9995" gradientTransform="matrix(1.9392 0 0 0.462 81.9755 27.906)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#000000"/>
+				<stop  offset="0.1458" style="stop-color:#000000;stop-opacity:0.8542"/>
+				<stop  offset="1" style="stop-color:#000000;stop-opacity:0"/>
+			</radialGradient>
+			<ellipse id="XMLID_10_" class="st0" cx="93.6" cy="87.1" rx="23.3" ry="5.5"/>
+			<polygon id="XMLID_9_" class="st1" points="93.6,51.4 87.1,51.4 93.6,87.1 100,51.4 			"/>
+			<linearGradient id="XMLID_76_" gradientUnits="userSpaceOnUse" x1="93.5726" y1="87.0721" x2="93.5726" y2="51.3836">
+				<stop  offset="0.4105" style="stop-color:#000000;stop-opacity:0"/>
+				<stop  offset="0.914" style="stop-color:#000000;stop-opacity:0.8542"/>
+				<stop  offset="1" style="stop-color:#000000"/>
+			</linearGradient>
+			<polygon id="XMLID_8_" class="st2" points="93.6,51.4 87.1,51.4 93.6,87.1 100,51.4 			"/>
+		</g>
+		<path id="XMLID_5_" class="st1" d="M187.1,53.5c0,1.1-0.9,2-2,2H2c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h183.2c1.1,0,2,0.9,2,2V53.5
+			z"/>
+	</g>
+	<text id="XMLID_3_" transform="matrix(1 0 0 1 21.5336 35.2147)" class="st3 st4 st5">Заречная 2</text>
+</g>
+</svg>

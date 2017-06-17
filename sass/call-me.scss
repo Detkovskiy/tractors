@@ -42,13 +42,15 @@
 .call-me__block {
   display: flex;
   flex-direction: column;
-  width: 110px;
+  width: 215px;
 }
 
 .call-me__phone {
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 38px;
+  line-height: 27px;
+  letter-spacing: 1px;
   color: $primary__yellow;
+  font-family: VolvoBroadProDigital;
 
   &:hover {
     color: #fff;
@@ -57,8 +59,8 @@
 
 .call-me__callback-toggle {
   color: #C7C7C7;
-  border-bottom: 1px dashed;
-  font-size: 11px;
+ // border-bottom: 1px dashed;
+  font-size: 15px;
   cursor: pointer;
 
   &:hover {
@@ -87,16 +89,18 @@
   }
 
   .call-me__block {
-    width: auto;
+    width: 230px;
   }
 
   .call-me__phone {
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 42px;
+    line-height: 31px;
+    display: block;
   }
 
   .call-me__callback-toggle {
-    font-size: 13px;
+    margin-top: 5px;
+    font-size: 15px;
   }
 
   .call-me__icon {
