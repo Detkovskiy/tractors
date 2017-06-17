@@ -1,2 +1,5 @@
+Sitemap: https://traktovichkoff.ru/sitemap.xml
+
 User-agent: *
-Disallow: /
+Host: https://traktovichkoff.ru
+Disallow:
