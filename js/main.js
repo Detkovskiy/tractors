@@ -97,6 +97,7 @@ var toggleMenu = document.querySelector('.menu-toggle');
 var mainMenu = document.querySelector('.main-menu');
 var modalCallback = document.querySelector('.modal-callback');
 var toggleCallback = document.querySelector('.call-me__callback-toggle');
+var toggleCallbackClose = document.querySelector('.modal-content-close');
 /*
 
 var objectClick = [
@@ -156,13 +157,14 @@ var openCallBack = (function () {
     if (modalCallback.classList.contains('hidden')) {
       modalCallback.classList.remove('hidden');
       modalCallback.setAttribute('style', 'top:' + sizeCallBack($(window).scrollTop()) + 'px;');
-      console.log($(window).scrollTop());
       document.addEventListener('keydown', function (evt) {
         if (evt.keyCode === 27) {
           modalCallback.classList.add('hidden');
         }
       });
-
+      toggleCallbackClose.addEventListener('click', function () {
+        modalCallback.classList.add('hidden');
+      });
 
     } else {
       modalCallback.classList.add('hidden');

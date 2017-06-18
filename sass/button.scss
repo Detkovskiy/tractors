@@ -4,15 +4,23 @@
 }
 
 .button-form-callback {
-  margin-right: 39px;
+  margin-right: 28px;
   margin-bottom: 20px;
-  width: 87px;
-  height: 26px;
+  width: 100px;
+  height: 40px;
   align-self: flex-end;
-  font: 16px/24px Cuprum;
+  font-size: 21px;
+  line-height: 35px;
+  font-family: 'VolvoBroadProDigital';
+  letter-spacing: 1px;
   color: #ecf0f1;
   background: $form-callback__color;
   border: none;
+
+  &:hover {
+    background: #fcd81d;
+    color: #4d4e53;
+  }
 }
 
 .button {
@@ -38,5 +46,19 @@
     text-shadow: none;
     text-transform: none;
     border-radius: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .button-form-callback {
+    margin-right: 45px;
+    margin-bottom: 35px;
+  }
+}
+
+@media (min-width: 375px) {
+  .button-form-callback {
+    width: 120px;
+    font-size: 26px;
   }
 }

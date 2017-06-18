@@ -1234,30 +1234,21 @@
   <div class="modal-callback__header">
     <span>Заказать звонок</span>
   </div>
-  <button class="close-modal"></button>
+  <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
 
-  <form action="" method="post" class="form-callback" target="fFormsSendFrame">
+  <div  class="form-callback">
 
-    <!--<label class="form-callback__input label__name" data-for="field_name" for="client-name">ВАШЕ ИМЯ</label>-->
+    <div id="send-result"></div>
+    <div id="error-result"></div>
+
     <input class="form-callback__input  form-callback__input--name" type="text" name="client-name" id="client-name" placeholder="Ваше имя">
 
-    <!--<label class="form-callback__input label__phone" data-for="field_phone" for="client-phone">НОМЕР ТЕЛЕФОНА</label>-->
     <input class="form-callback__input  form-callback__input--phone" type="tel" name="client-phone" id="client-phone" placeholder="Номер телефона">
 
-    <input type="hidden" name="send_type" value="2">
-    <input type="hidden" name="send_extra" value="1">
+    <input type="button" class="button-form-callback" value="Отправить" onclick="sendMailBanner();">
 
-    <input type="submit" class="button-form-callback" value="Заказать">
-
-    <div class="form-callback__progress">
-      <div class="form-callback__submit-progress">
-        <span class="form-callback__progress-1"></span>
-        <span class="form-callback__progress-2"></span>
-        <span class="form-callback__progress-3"></span>
-      </div>
-    </div>
-  </form>
-<div class="modal-overlay"></div>
+  </div>
+  <div class="modal-overlay"></div>
 </div>
 
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
@@ -1266,6 +1257,8 @@
 <script src="js/main.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/zozo.tabs.min.js"></script>
+<script src="js/send-mail.js"></script>
+
 <script>
   jQuery(document).ready(function ($) {
     $("#tabbed-nav3").zozoTabs({

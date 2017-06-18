@@ -1,0 +1,56 @@
+#error-result {
+  display: block;
+  width: 100%;
+  background: #FFBABA url("../img/error.svg") no-repeat 15px;
+  background-size: 20px;
+
+  &--banner {
+    position: absolute;
+    content: "";
+    display: block;
+    top: -42px;
+    left: 31px;
+    width: 87%;
+    background: #FFBABA url("../img/error.svg") no-repeat 15px;
+    background-size: 20px;
+  }
+
+  &--order {
+    position: absolute;
+    content: "";
+    display: block;
+    top: -50px;
+    left: 0;
+    width: 77%;
+    background: #FFBABA url("../img/error.svg") no-repeat 15px;
+    background-size: 20px;
+  }
+
+  &--work {
+    position: absolute;
+    content: "";
+    display: block;
+    top: -50px;
+    left: 79px;
+    width: 77%;
+    background: #FFBABA url("../img/error.svg") no-repeat 15px;
+    background-size: 20px;
+  }
+}
+
+.error-text {
+  padding-left: 50px;
+  line-height: 40px;
+  color: #D8000C;
+}
+
+@media (min-width: 720px) {
+  #error-result {
+    width: 85%;
+  }
+
+  .error-text {
+    font-size: 26px;
+    line-height: 60px;
+  }
+}
