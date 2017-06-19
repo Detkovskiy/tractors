@@ -1,4 +1,6 @@
-#send-result {
+#send-result,
+#send-result__order,
+#send-result__services {
   display: block;
   width: 100%;
   background: #DFF2BF url("../img/success.svg") no-repeat 15px;
@@ -12,7 +14,9 @@
 }
 
 @media (min-width: 768px) {
-  #send-result {
+  #send-result,
+  #send-result__order,
+  #send-result__services {
     width: 85%;
   }
 

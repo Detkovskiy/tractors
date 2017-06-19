@@ -97,20 +97,13 @@ var toggleMenu = document.querySelector('.menu-toggle');
 var mainMenu = document.querySelector('.main-menu');
 var modalCallback = document.querySelector('.modal-callback');
 var toggleCallback = document.querySelector('.call-me__callback-toggle');
-var toggleCallbackClose = document.querySelector('.modal-content-close');
-/*
+var toggleCallbackClose = modalCallback.querySelector('.modal-content-close');
 
-var objectClick = [
-  {
-    nameToggle: toggleMenu,
-    openBlock: mainMenu
-  },
-  {
-    nameToggle: toggleCallback,
-    openBlock: modalCallback
-  }
-];
-*/
+var modalOrder = document.querySelector('.modal-order');
+var toggleOrderClose = modalOrder.querySelector('.modal-order-close');
+
+var modalServices = document.querySelector('.modal-services');
+var toggleServicesClose = modalServices.querySelector('.modal-services-close');
 
 var sizeTopMenu = function (position) {
   var cordY = (position == 0) ? position + 80 : position - 30;
@@ -139,13 +132,6 @@ var openMainMenu = (function () {
           mainMenu.classList.add('hidden');
         });
       }
-
-
-      /*document.addEventListener('click', function () {
-
-          mainMenu.classList.add('hidden');
-
-      });*/
     } else {
       mainMenu.classList.add('hidden');
     }
@@ -172,6 +158,60 @@ var openCallBack = (function () {
   });
 })();
 
+
+var openServices = (function () {
+  var toggleServices = document.querySelectorAll('.button--services');
+
+  for (var i = 0; i < toggleServices.length; i++) {
+    toggleServices[i].addEventListener('click', function () {
+      if (modalServices.classList.contains('hidden')) {
+        modalServices.classList.remove('hidden');
+        modalServices.setAttribute('style', 'top:' + sizeCallBack($(window).scrollTop()) + 'px;');
+        document.addEventListener('keydown', function (evt) {
+          if (evt.keyCode === 27) {
+            modalServices.classList.add('hidden');
+          }
+        });
+        toggleServicesClose.addEventListener('click', function () {
+          modalServices.classList.add('hidden');
+        });
+
+      } else {
+        modalServices.classList.add('hidden');
+      }
+    });
+  }
+
+})();
+
+var openModalOrder = (function () {
+  var toggleOrder = document.querySelectorAll('.open-modal__order');
+  var carList = document.querySelector('#order-value');
+
+  for (var i = 0; i < toggleOrder.length; i++) {
+    toggleOrder[i].addEventListener('click', function (evt) {
+      event.stopPropagation();
+      carList.value = evt.currentTarget.getAttribute('data-target');
+
+      if (modalOrder.classList.contains('hidden')) {
+        modalOrder.classList.remove('hidden');
+        modalOrder.setAttribute('style', 'top:' + sizeCallBack($(window).scrollTop()) + 'px;');
+        document.addEventListener('keydown', function (evt) {
+
+          if (evt.keyCode === 27) {
+            modalOrder.classList.add('hidden');
+          }
+        });
+        toggleOrderClose.addEventListener('click', function () {
+          modalOrder.classList.add('hidden');
+        });
+
+      } else {
+        modalOrder.classList.add('hidden');
+      }
+    })
+  }
+})();
 
 var arrcordTooltips = [
   {
@@ -258,4 +298,7 @@ var tooltips = function () {
 
 jQuery(function($){
   $("#client-phone").mask("+7 (999) 999-9999");
+  $("#order-client-phone").mask("+7 (999) 999-9999");
+  $("#services-client-phone").mask("+7 (999) 999-9999");
 });
+

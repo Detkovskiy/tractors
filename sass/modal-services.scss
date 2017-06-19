@@ -1,0 +1,167 @@
+.modal-services {
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 295px;
+  background: #ccc;
+  box-sizing: border-box;
+  border: 1px solid #e3e3e3;
+
+  -webkit-animation: zoomIn 1s;
+  animation: zoomIn 1s;
+}
+
+.modal-services__header {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 33px;
+  line-height: 35px;
+  font-family: 'VolvoBroadProDigital';
+  letter-spacing: 2px;
+  background: #fcd81d;
+  color: #4d4e53;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.3);
+
+}
+
+.modal-services-close {
+  position: absolute;
+  top: 0;
+  right: -7px;
+
+  width: 40px;
+  height: 30px;
+
+  font-size: 0;
+
+  cursor: pointer;
+
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  z-index: 3;
+}
+
+.modal-services-close::before,
+.modal-services-close::after {
+  position: absolute;
+  content: "";
+  top: 12px;
+  right: 5px;
+  width: 30px;
+  height: 3px;
+
+  border-radius: 1px;
+  background-color: #4d4e53;
+  z-index: 0;
+}
+
+.modal-services-close:hover {
+
+  &:after {
+    background-color: #fff;
+  }
+
+  &:before {
+    background-color: #fff;
+  }
+}
+
+.modal-services-close::before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.modal-services-close::after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+
+@-webkit-keyframes zoomIn {
+  0% {
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal-order {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 720px) {
+  .modal-services {
+    margin-top: 115px;
+    width: 600px;
+  }
+
+  .modal-services__header {
+    height: 100px;
+    font-size: 45px;
+  }
+
+  .modal-services-close {
+    width: 70px;
+    height: 60px;
+  }
+
+  .modal-services-close::before,
+  .modal-services-close::after {
+    top: 26px;
+    width: 60px;
+  }
+}
+
+@media (min-width: 375px) {
+  .modal-services {
+    width: 342px;
+  }
+
+  .modal-services__header {
+    height: 75px;
+  }
+
+  .modal-services-close {
+    width: 50px;
+    height: 40px;
+  }
+  .modal-services-close::before,
+  .modal-services-close::after {
+    top: 18px;
+    width: 40px;
+  }
+}

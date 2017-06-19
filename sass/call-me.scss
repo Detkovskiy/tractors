@@ -1,7 +1,7 @@
 #sub-menu {
   position: fixed;
   width: 90%;
-  background: #313131;
+//  background: #313131;
   z-index: 1001;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .call-me__phone {
-  margin-bottom: 16px;
+  margin-bottom: 7px;
   font-size: 38px;
   line-height: 32px;
   letter-spacing: 1px;
@@ -61,7 +61,7 @@
 .call-me__callback-toggle {
   color: #C7C7C7;
   font-size: 15px;
-  line-height: 2px;
+ // line-height: 2px;
   cursor: pointer;
 
   &:hover {

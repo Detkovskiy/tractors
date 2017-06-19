@@ -9,16 +9,16 @@ if (isset($_POST['name'])){
   $message = '';
 }
 
-// проверим поле "Телефонв"
+// проверим поле "Телефон"
 if (isset($_POST['phone'])){
   $message .= "\n". 'Телефон: ' . $_POST['phone'];
 } else {
   $message .= "\n";
 }
 
-// проверим поле "Емэйл"
-if (isset($_POST['email'])){
-  $message .= "\n". 'Почта: ' . $_POST['email'];
+// проверим поле "Техника"
+if (isset($_POST['cars'])){
+  $message .= "\n". 'Техника: ' . $_POST['cars'];
 } else {
   $message .= "\n";
 }
