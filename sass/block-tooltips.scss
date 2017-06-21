@@ -60,6 +60,7 @@
     border-radius: 50%;
     background-color: #ff4f59;
     cursor: pointer;
+   // z-index: 10000;
 
     &::after {
       position: absolute;
@@ -128,6 +129,7 @@
   .tooltip-toggle:hover + .tooltip-content {
     transform: translate3d(0, 0, 0);
     opacity: 1;
+    cursor: pointer;
   }
 
   .tooltip-title {

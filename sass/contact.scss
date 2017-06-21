@@ -34,6 +34,10 @@
   height: 30px;
 }
 
+.contact__tel {
+  padding-left: 50px;
+}
+
 @media (min-width: 720px) {
   .contact {
     flex-direction: row;
