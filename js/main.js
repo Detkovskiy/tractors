@@ -289,13 +289,6 @@ var tooltips = function () {
   }
 };
 
-
-
-
-
-
-
-
 jQuery(function($){
   $("#client-phone").mask("+7 (999) 999-9999");
   $("#order-client-phone").mask("+7 (999) 999-9999");

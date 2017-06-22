@@ -41,7 +41,7 @@ gulp.task("style", function() {
 
 gulp.task("scripts", function() {
   return gulp.src("js/*.js")
-   // .pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest("build/js"));
 });
 

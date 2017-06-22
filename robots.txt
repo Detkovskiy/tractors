@@ -2,4 +2,4 @@ Sitemap: https://traktovichkoff.ru/sitemap.xml
 
 User-agent: *
 Host: https://traktovichkoff.ru
-Disallow: /
+Disallow:
