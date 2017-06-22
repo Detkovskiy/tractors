@@ -9,7 +9,6 @@
   background-color: #f3f3f3;
   box-shadow: -2px -2px #fff,
   2px  2px #d9d9d9;
-
 }
 
 .services__title {
@@ -45,10 +44,6 @@
   width: 100%;
 }
 
-.services__wrapper {
-
-}
-
 @media (min-width: 1366px) {
   .services__container-img {
     margin-right: 100px;
@@ -67,7 +62,6 @@
 }
 
 @media (min-width: 769px) {
-
   .services__item {
     position: relative;
     flex-direction: row;

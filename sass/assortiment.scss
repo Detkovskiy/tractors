@@ -69,7 +69,6 @@
     left: 4px;
     width: 13px;
   }
-
 }
 
 @-webkit-keyframes rotation_cw {
@@ -157,7 +156,6 @@
 .assortment__slide-block {
   position: absolute;
   opacity: 0;
-//  display: none;
   top: 10px;
   right: -20px;
   width: 0;
@@ -226,11 +224,9 @@
   top: -10px;
   width: 280px;
   left: -10px;
-  //display: block;
   opacity: 1;
   box-shadow: 0 0 10px 4px #d9d9d9;
   transition-property: top, opacity;
-
   transition-duration: 0.5s;
 }
 

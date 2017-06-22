@@ -1,7 +1,6 @@
 #sub-menu {
   position: fixed;
   width: 90%;
-//  background: #313131;
   z-index: 1001;
 }
 
@@ -12,7 +11,7 @@
   order: 1;
   width: 100%;
   justify-content: space-between;
- // background: $primary__black;
+
   &:before {
     position: absolute;
     content: "";
@@ -23,7 +22,6 @@
     background: #2c2c2c;
     z-index: -1;
   }
-
 }
 
 .call-me__icon {
@@ -65,7 +63,6 @@
 .call-me__callback-toggle {
   color: #C7C7C7;
   font-size: 15px;
- // line-height: 2px;
   cursor: pointer;
 
   &:hover {
@@ -87,7 +84,7 @@
     width: 100%;
     justify-content: space-between;
     background: #2c2c2c;
-    // background: $primary__black;
+
     &:before {
       display: none;
     }
