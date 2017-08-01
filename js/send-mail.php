@@ -33,8 +33,8 @@ if (isset($_POST['message'])){
 // На случай если какая-то строка письма длиннее 70 символов используем wordwrap()
 $message = wordwrap($message, 70);
 
-$send_to = '9119113142@mail.ru';  // кому отправить
-$subject = 'Заявка с сайта Mastergrunt';	// тема
+$send_to = 'mastergrunt@mail.ru';  // кому отправить
+$subject = 'Заявка с сайта Трактовичков';	// тема
 
 // дополнительные данные
 $headers = array();
