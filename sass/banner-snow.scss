@@ -1,0 +1,18 @@
+@media (min-width: 1000px) {
+  .banner-snow {
+    padding-left: 350px;
+    background: url('../img/banner-snow@2x.jpg') no-repeat;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner-snow {
+    padding-left: 210px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 493px;
+    background: url('../img/banner-snow@mobile.jpg') no-repeat;
+  }
+}
