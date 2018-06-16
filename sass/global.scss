@@ -14,18 +14,9 @@ body {
 }
 
 header {
-  padding: 20px 0 80px;
+  padding: 20px 0 62px;
   width: 100%;
   background: $primary__black;
-}
-
-@media (min-width: 1000px) {
-  header {
-    position: fixed;
-    padding: 5px 0;
-    top: 0;
-    z-index: 1002;
-  }
 }
 
 .bg {
@@ -36,11 +27,21 @@ header {
   font-size: 34px;
   line-height: 36px;
   color: #4d4e53;
-  font-family: 'VolvoBroadProDigital';
+  font-family: 'VolvoBroadProDigital', sans-serif;
   letter-spacing: 2px;
 }
 
+@media (min-width: 1000px) {
+  header {
+    padding-bottom: 62px;
+  }
+}
+
 @media (min-width: 768px) {
+  header {
+    padding-bottom: 75px;
+  }
+
   .phone-in-text {
     &--block {
       display: inherit;
@@ -61,7 +62,7 @@ h2  {
   font-size: 40px;
   line-height: 33px;
   color: #4d4e53;
-  font-family: 'VolvoBroadProDigital';
+  font-family: 'VolvoBroadProDigital', sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   background: url('../img/backgrounds/h2_bg.svg') 14px 9px repeat-x;

@@ -21,80 +21,43 @@
   <link rel="stylesheet" type="text/css" href="css/normalize.min.css" media="all" />
   <link rel="stylesheet" type="text/css" href="css/style.min.css" media="all" />
   <link rel="stylesheet" type="text/css" href="css/twentytwenty.css" media="all" />
-  <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+  <link href="css/jetmenu.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+  <script type="text/javascript" src="js/jetmenu.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){
+      $().jetmenu();
+    });
+  </script>
   <link rel="icon" href="favicon.png" type="image/png">
 
   <title>Трактовичкоф | Аренда экскаватора погрузчика в СПб | +7(812)900-24-60</title>
 </head>
-<body onresize="tooltips()">
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-  (function (d, w, c) {
-    (w[c] = w[c] || []).push(function() {
-      try {
-        w.yaCounter45084843 = new Ya.Metrika({
-          id:45084843,
-          clickmap:true,
-          trackLinks:true,
-          accurateTrackBounce:true,
-          webvisor:true
-        });
-      } catch(e) { }
-    });
 
-    var n = d.getElementsByTagName("script")[0],
-      s = d.createElement("script"),
-      f = function () { n.parentNode.insertBefore(s, n); };
-    s.type = "text/javascript";
-    s.async = true;
-    s.src = "https://mc.yandex.ru/metrika/watch.js";
+<body>
 
-    if (w.opera == "[object Opera]") {
-      d.addEventListener("DOMContentLoaded", f, false);
-    } else { f(); }
-  })(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/45084843" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-<header id="top_nav">
+<header>
   <div class="container  container--header">
     <a class="logo">
       <img class="logo__img" src="img/logo.svg" alt="Трактовичкоф - аренда экскаватора погрузчика">
     </a>
-    <nav id="menu">
-      <ul class="main-menu  hidden">
-        <li class="technika">
-          <a href="#assortments">Техника</a>
-          <!--<ul class="assortment__list">
-            <li><a href="https://ya.ru/">Экскаватор погрузчик</a></li>
-            <li><a href="https://ya.ru/">Гусеничный экскаватор</a></li>
-            <li><a href="https://ya.ru/">Полноповоротный колесный экскаватор</a></li>
-            <li><a href="https://ya.ru/">Ямобур</a></li>
-            <li><a href="https://ya.ru/">Камаз</a></li>
-            <li><a href="https://ya.ru/">Пухто</a></li>
-          </ul>-->
-        </li>
-        <li><a href="#services">Услуги</a></li>
-        <li><a href="#price">Прайс</a></li>
-        <li><a href="#contact">Контакты</a></li>
-      </ul>
-    </nav>
-    <div id="sub-menu">
-      <div class="call-me">
-        <div class="call-me___wrapper">
-          <div class="call-me__block">
-            <a href="tel:+79219002460" class="call-me__phone">
-              <span class="call-me__phone--color">+7 (812)</span> 900-24-60
-            </a>
-            <a class="call-me__callback-toggle" data-index="1">
-              ⇄  перезвоните  мне
-            </a>
-          </div>
-        </div>
-        <button class="menu-toggle" data-index="0"></button>
+
+    <div class="wrapper__feedback">
+      <div class="feedback">
+        <a href="tel:+79219002460" class="call-me__phone">
+          <span class="call-me__phone--color">+7 (812)</span> 900-24-60
+        </a>
+        <a href="mailto:info@traktovichkoff.ru" class="call-me__email">
+          <span class="call-me__email--color">info@traktovichkoff.ru</span>
+        </a>
       </div>
+
+      <a class="call-me__callback-toggle" data-index="1">
+        ⇄  перезвоните  мне
+      </a>
     </div>
   </div>
+  <?= $main_menu ?>
 </header>
 
 <div class="container main-title">
@@ -365,254 +328,6 @@
           </div>
 
         </li>
-        <!--
-                <li class="assortment__item">
-                  <div class="assortment__head">
-                    <strong class="assortment__item-name">Komatsu WB97S</strong>
-                    <div class="assortment__handle-wrapper">
-                      <div class="assortment__handle">
-                        <img class="gear" src="img/icon_inform.svg" alt="Иконка">
-                      </div>
-                      <div class="assortment__slide-block">
-                        <div class="assortment__container-slide">
-                          <table class="assortment__table">
-                            <tbody>
-                            <tr>
-                              <th>Масса, кг</th>
-                              <td>8700</td>
-                            </tr>    <tr>
-                              <th>Объем обратной лопаты, м<sup>3</sup></th>
-                              <td>0,19</td>
-                            </tr>    <tr>
-                              <th>Объем ковша, м<sup>3</sup></th>
-                              <td>1</td>
-                            </tr>    <tr>
-                              <th>Высота разгрузки погрузчика, м</th>
-                              <td>2,84</td>
-                            </tr>    <tr>
-                              <th>Высота обратной лопаты, м</th>
-                              <td>5,1</td>
-                            </tr>    <tr>
-                              <th>Глубина копания, м</th>
-                              <td>6,4</td>
-                            </tr>    <tr>
-                              <th>Опции</th>
-                              <td>
-                                <ul>
-                                  <li>гидромолот, гидробур</li>
-                                  <li>вилы, узкий ковш</li>
-                                </ul>
-                              </td>
-                            </tr>
-                            </tbody>
-                          </table>
-                          <picture>
-                            <img class="assortment__item-img  assortment__item-img&#45;&#45;slide" src="img/assortment/atachment_3@1x.png" srcset="img/assortment/atachment_3@2x.png 2x" alt="Навесное оборудование для Komatsu">
-                          </picture>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <picture>
-                    <img class="assortment__item-img" src="img/assortment/komatsu-wb97s@1x.png" srcset="img/assortment/komatsu-wb97s@2x.png 2x" alt="Экскаватор погрузчик komatsu wb97s">
-                  </picture>
-                  <p class="assortment__price">от
-                    <span class="assortment__price  assortment__price&#45;&#45;color">1250</span>
-                    <span class="assortment__price-icon">/час</span>
-                  </p>
-                  <a class="button open-modal__order" data-target="Komatsu WB97S">Оформить заказ</a>
-                </li>
-
-                <li class="assortment__item">
-                  <div class="assortment__head">
-                    <strong class="assortment__item-name">Komatsu WB97S</strong>
-                    <div class="assortment__handle-wrapper">
-                      <div class="assortment__handle">
-                        <img class="gear" src="img/icon_inform.svg" alt="Иконка">
-                      </div>
-                      <div class="assortment__slide-block">
-                        <div class="assortment__container-slide">
-                          <table class="assortment__table">
-                            <tbody>
-                            <tr>
-                              <th>Масса, кг</th>
-                              <td>8700</td>
-                            </tr>    <tr>
-                              <th>Объем обратной лопаты, м<sup>3</sup></th>
-                              <td>0,19</td>
-                            </tr>    <tr>
-                              <th>Объем ковша, м<sup>3</sup></th>
-                              <td>1</td>
-                            </tr>    <tr>
-                              <th>Высота разгрузки погрузчика, м</th>
-                              <td>2,84</td>
-                            </tr>    <tr>
-                              <th>Высота обратной лопаты, м</th>
-                              <td>5,1</td>
-                            </tr>    <tr>
-                              <th>Глубина копания, м</th>
-                              <td>6,4</td>
-                            </tr>    <tr>
-                              <th>Опции</th>
-                              <td>
-                                <ul>
-                                  <li>гидромолот, гидробур</li>
-                                  <li>вилы, узкий ковш</li>
-                                </ul>
-                              </td>
-                            </tr>
-                            </tbody>
-                          </table>
-                          <picture>
-                            <img class="assortment__item-img  assortment__item-img&#45;&#45;slide" src="img/assortment/atachment_3@1x.png" srcset="img/assortment/atachment_3@2x.png 2x" alt="Навесное оборудование для Komatsu">
-                          </picture>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <picture>
-                    <img class="assortment__item-img" src="img/assortment/komatsu-wb97s@1x.png" srcset="img/assortment/komatsu-wb97s@2x.png 2x" alt="Экскаватор погрузчик komatsu wb97s">
-                  </picture>
-                  <p class="assortment__price">от
-                    <span class="assortment__price  assortment__price&#45;&#45;color">1250</span>
-                    <span class="assortment__price-icon">/час</span>
-                  </p>
-                  <a class="button open-modal__order" data-target="Komatsu WB97S">Оформить заказ</a>
-                </li>
-
-                <li class="assortment__item">
-                  <div class="assortment__head">
-                    <strong class="assortment__item-name">CAT 312C</strong>
-                    <div class="assortment__handle-wrapper">
-                      <div class="assortment__handle">
-                        <img class="gear" src="img/icon_inform.svg" alt="Иконка">
-                      </div>
-                      <div class="assortment__slide-block">
-                        <div class="assortment__container-slide">
-                          <table class="assortment__table">
-                            <tbody>
-                            <tr>
-                              <th>Масса, кг</th>
-                              <td>13500</td>
-                            </tr>     <tr>
-                              <th>Объем ковша, м<sup>3</sup></th>
-                              <td>0,75</td>
-                            </tr>    <tr>
-                              <th>Высота погрузки, м</th>
-                              <td>2,7</td>
-                            </tr>    <tr>
-                              <th>Дальность погрузки, м</th>
-                              <td>7,5</td>
-                            </tr>    <tr>
-                              <th>Максимальная дальность копания, м</th>
-                              <td>8,6</td>
-                            </tr>    <tr>
-                              <th>Макс глубина копания вертикальной стенки, м</th>
-                              <td>5,3</td>
-                            </tr>    <tr>
-                              <th>Глубина копания, м</th>
-                              <td>6</td>
-                            </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <picture>
-                    <img class="assortment__item-img" src="img/assortment/cat-312c@1x.png" srcset="img/assortment/cat-312c@2x.png 2x" alt="Экскаватор CAT 312c">
-                  </picture>
-                  <p class="assortment__price">от
-                    <span class="assortment__price  assortment__price&#45;&#45;color">1350</span>
-                    <span class="assortment__price-icon">/час</span>
-                  </p>
-                  <a class="button open-modal__order" data-target="CAT 312C">Оформить заказ</a>
-                </li>
-
-                <li class="assortment__item">
-                  <div class="assortment__head">
-                    <strong class="assortment__item-name">Hyundai R170</strong>
-                    <div class="assortment__handle-wrapper">
-                      <div class="assortment__handle">
-                        <img class="gear" src="img/icon_inform.svg" alt="Иконка">
-                      </div>
-                      <div class="assortment__slide-block">
-                        <div class="assortment__container-slide">
-                          <table class="assortment__table">
-                            <tbody>
-                            <tr>
-                              <th>Масса, кг</th>
-                              <td>16200</td>
-                            </tr>     <tr>
-                              <th>Объем ковша, м<sup>3</sup></th>
-                              <td>0,4-1,05</td>
-                            </tr>    <tr>
-                              <th>Высота погрузки, м</th>
-                              <td>6,3</td>
-                            </tr>    <tr>
-                              <th>Максимальная высота среза	, м</th>
-                              <td>9,1</td>
-                            </tr>    <tr>
-                              <th>Максимальный вылет вдоль уровня земли, м</th>
-                              <td>8,8</td>
-                            </tr>    <tr>
-                              <th>Макс глубина копания вертикальной стенки, м</th>
-                              <td>5,4</td>
-                            </tr>    <tr>
-                              <th>Глубина копания, м</th>
-                              <td>5,8</td>
-                            </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <picture>
-                    <img class="assortment__item-img" src="img/assortment/hyindai@1x.png" srcset="img/assortment/hyindai@2x.png 2x" alt="Колесный экскаватор Hyundai R170">
-                  </picture>
-                  <p class="assortment__price">от
-                    <span class="assortment__price  assortment__price&#45;&#45;color">1350</span>
-                    <span class="assortment__price-icon">/час</span>
-                  </p>
-                  <a class="button open-modal__order" data-target="Hyundai R170">Оформить заказ</a>
-                </li>
-
-                <li class="assortment__item">
-                  <strong class="assortment__item-name">Ямобур ISUZU</strong>
-                  <picture>
-                    <img class="assortment__item-img" src="img/assortment/jamobyr-isuzi@1x.png" srcset="img/assortment/jamobyr-isuzi@2x.png 2x" alt="Ямобур isuzi">
-                  </picture>
-                  <p class="assortment__price">от
-                    <span class="assortment__price  assortment__price&#45;&#45;color">1400</span>
-                    <span class="assortment__price-icon">/час</span>
-                  </p>
-                  <a class="button open-modal__order" data-target="Ямобур ISUZU">Оформить заказ</a>
-                </li>
-
-                <li class="assortment__item">
-                  <strong class="assortment__item-name">Камаз 6520</strong>
-                  <picture>
-                    <img class="assortment__item-img" src="img/assortment/kamaz-6520@1x.png" srcset="img/assortment/kamaz-6520@2x.png 2x" alt="Камаз 6520">
-                  </picture>
-                  <p class="assortment__price">от
-                    <span class="assortment__price  assortment__price&#45;&#45;color">1250</span>
-                    <span class="assortment__price-icon">/час</span>
-                  </p>
-                  <a class="button open-modal__order" data-target="Камаз 6520">Оформить заказ</a>
-                </li>
-
-                <li class="assortment__item">
-                  <strong class="assortment__item-name">Пухто 27 м<sup>3</sup></strong>
-                  <picture>
-                    <img class="assortment__item-img" src="img/assortment/pyxto-27@1x.png" srcset="img/assortment/pyxto-27@2x.png 2x" alt="Пухто 27 кубов">
-                  </picture>
-                  <p class="assortment__price">от
-                    <span class="assortment__price  assortment__price&#45;&#45;color">7900</span>
-                    <span class="assortment__price-icon"></span>
-                  </p>
-                  <a class="button open-modal__order" data-target="Пухто">Оформить заказ</a>
-                </li>-->
       </ul>
     </div>
   </div>
@@ -633,65 +348,6 @@
   </p>  
 </div>
 
-<div class="bg">
-  <div class="container  container--banner">
-    <picture>
-      <source media="(min-width: 1200px)" srcset="img/banner@1x.jpg 1x, img/banner@2x.jpg 2x">
-      <img class="background-tooltips" src="img/banner-tablet@1x.jpg" srcset="img/banner-tablet@2x.jpg 2x" alt="Аренда экскаватора погрузчика спб">
-    </picture>
-    <ul class="block-tooltips">
-      <li class="tooltip  tooltip--rachistka">
-        <span class="tooltip-toggle"></span>
-        <div class="tooltip-content">
-          <h5 class="tooltip-title">Расчистка участка</h5>
-          <p class="tooltip-text">Удаление деревьев, пней и кустарника</p>
-        </div>
-      </li>
-      <li class="tooltip  tooltip--byrenie">
-        <span class="tooltip-toggle"></span>
-        <div class="tooltip-content">
-          <h5 class="tooltip-title">Буровые работы</h5>
-          <p class="tooltip-text">Создание лунок под элементы фундаментов, заборов, опор</p>
-        </div>
-      </li>
-      <li class="tooltip  tooltip--viravnivanie">
-        <span class="tooltip-toggle"></span>
-        <div class="tooltip-content">
-          <h5 class="tooltip-title">Выравнивание земельного участка</h5>
-          <p class="tooltip-text">Планировка земельного участка</p>
-        </div>
-      </li>
-      <li class="tooltip  tooltip--drenaj">
-        <span class="tooltip-toggle"></span>
-        <div class="tooltip-content">
-          <h5 class="tooltip-title">Дренаж дачного участка</h5>
-          <p class="tooltip-text">Отведение излишков талых вод и осадков от дома и сада</p>
-        </div>
-      </li>
-      <li class="tooltip  tooltip--mojenie">
-        <span class="tooltip-toggle"></span>
-        <div class="tooltip-content  tooltip-content--left">
-          <h5 class="tooltip-title">Мощение тротуарной плиткой</h5>
-          <p class="tooltip-text">Устройство площадки под автотранспорт</p>
-        </div>
-      </li>
-      <li class="tooltip  tooltip--fundament">
-        <span class="tooltip-toggle"></span>
-        <div class="tooltip-content">
-          <h5 class="tooltip-title">Сооружение фундамента</h5>
-          <p class="tooltip-text">Рытье котлованов и траншей, вывоз и утилизация грунта</p>
-        </div>
-      </li>
-      <li class="tooltip  tooltip--crane">
-        <span class="tooltip-toggle"></span>
-        <div class="tooltip-content  tooltip-content--left">
-          <h5 class="tooltip-title">Высотные работы</h5>
-          <p class="tooltip-text">Погрузо-разгрузочные работы, подъем грузов на высоту</p>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
 
 <section id="services">
   <div class="container  container--services">
@@ -1590,11 +1246,9 @@
 <link href="css/zozo.tabs.min.css" rel="stylesheet">
 <script src="js/input-mask.js"></script>
 <script src="js/main.js"></script>
-<script src="js/jquery.min.js"></script>
+
+
 <script src="js/zozo.tabs.min.js"></script>
-<script src="js/jquery.event.move.js"></script>
-<script src="js/jquery.twentytwenty.js"></script>
-<script src="js/send-mail.js"></script>
 <script>
   jQuery(document).ready(function ($) {
     $("#tabbed-nav3").zozoTabs({
@@ -1613,5 +1267,14 @@
     });
   });
 </script>
+<script src="js/send-mail.js"></script>
+
+<!--
+<script src="js/jquery.min.js"></script>
+
+<script src="js/jquery.event.move.js"></script>
+<script src="js/jquery.twentytwenty.js"></script>
+
+-->
 </body>
 </html>

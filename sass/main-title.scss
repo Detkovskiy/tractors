@@ -3,7 +3,7 @@
 
   & h1 {
     margin: 20px 0 40px;
-    font: 48px/50px VolvoBroadProDigital;
+    font: 48px/50px VolvoBroadProDigital, sans-serif;
     letter-spacing: 1px;
     text-align: center;
     text-transform: uppercase;
@@ -24,7 +24,7 @@
   line-height: 50px;
   letter-spacing: 1px;
   color: #4d4e53;
-  font-family: VolvoBroadProDigital;
+  font-family: VolvoBroadProDigital, sans-serif;
 
   &--small {
     margin-bottom: 20px;
@@ -44,10 +44,6 @@
 }
 
 @media (min-width: 1000px) {
-  .main-title  {
-    margin-top: 96px;
-  }
-
   .main-title__span   {
     font-size: 51px;
 
