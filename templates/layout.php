@@ -29,7 +29,8 @@
       $().jetmenu();
     });
   </script>
-  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+
 
   <title>Трактовичкоф | Аренда экскаватора погрузчика в СПб | +7(812)900-24-60</title>
 </head>

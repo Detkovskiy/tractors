@@ -1,5 +1,6 @@
 <?php session_start();
 require_once 'init.php';
+$result = $_SERVER['REQUEST_URI'];
 
 $title = "Главная";
 
@@ -31,6 +32,7 @@ $meta = render_template('templates/meta.php',
 $layout = render_template('templates/layout.php',
   [
     'title' => $title,
+    'result' => $result,
     /*'meta' => $meta,*/
     'main_menu' => $main_menu
   ]);
