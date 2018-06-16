@@ -1,0 +1,245 @@
+#assortments {
+  padding-top: 15px;
+}
+
+.assortment__items {
+  margin-bottom: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.assortment__item {
+  position: relative;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #f3f3f3;
+  box-shadow: -2px -2px #fff,
+  2px  2px #d9d9d9;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    box-shadow: 0 0 30px 10px #d9d9d9;
+    transform: scale(1.1);
+    z-index: 10;
+  }
+}
+
+.item__img {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.item__description {
+  //flex: 2;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.item__description-left {
+  padding: 20px 15px;
+  flex: 3;
+}
+
+.item__description-right {
+  padding: 20px 15px;
+  flex: 1;
+  background: yellow;
+}
+
+.item__name {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+
+  & strong {
+    padding: 15px 0;
+    font-size: 24px;
+  }
+
+  & picture {
+    margin-top: 10px;
+    align-self: center;
+  }
+
+  & p {
+    font-size: 16px;
+
+    & span {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+}
+
+.item__price {
+  padding: 30px 15px;
+  text-align: center;
+  background: #f3f3f3;
+}
+
+.assortment__price {
+  padding: 0 5px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.assortment__price-icon {
+  padding-left: 5px;
+
+  &::before {
+    display: inline-block;
+    vertical-align: top;
+    content: '';
+    width: 15px;
+    height: 20px;
+    background: url('../img/rub.svg') no-repeat center;
+  }
+}
+
+.item__ttx {
+  padding: 0;
+  display: flex;
+  background: #2c2c2c;
+  color: #fcd81d;
+
+  & div {
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+  }
+}
+
+.item__ttx-title {
+  height: 50%;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+}
+
+.item__ttx-value {
+  margin-top: 0;
+  text-align: center;
+}
+
+.item__btn {
+  padding: 0;
+  display: flex;
+  background: #fcd81d;
+  color: #2c2c2c;
+
+  & a {
+    padding: 10px 0;
+    flex: 1;
+    text-align: center;
+
+    &:first-child {
+      border-right: solid 2px #2c2c2c;
+    }
+  }
+
+  & .button {
+    padding: 20px 15px;
+    border-radius: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .assortment__item {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .item__ttx-title {
+    font-size: 16px;
+  }
+
+  .item__ttx-value {
+    font-size: 26px;
+  }
+
+  .row {
+    flex-direction: row;
+    height: auto;
+  }
+
+  .item__price {
+    padding: 30px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item__btn {
+    flex-direction: column;
+
+    & a {
+      width: 100%;
+
+      &:first-child {
+        border-right: none;
+        border-bottom: solid 2px #2c2c2c;
+      }
+    }
+  }
+
+  .item__name {
+    position: relative;
+    height: auto;
+
+    & picture {
+      position: absolute;
+      bottom: -125px;
+      left: -295px;
+    }
+  }
+
+  .item__equipment {
+    position: relative;
+
+    &:before {
+      position: absolute;
+      padding-left: 27px;
+      top: -44px;
+      left: -25px;
+      content: "Навесное оборудование";
+      width: 293px;
+      border-bottom: 2px solid #2c2c2c;
+    }
+  }
+}
+
+@media (min-width: 1124px) {
+  .assortment__item {
+    width: 31%;
+  }
+}
+
+@media (min-width: 768px) {
+  .assortment__items {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .assortment__item {
+    width: 48%;
+  }
+
+  .item__name {
+    height: 582px;
+  }
+}
+
+

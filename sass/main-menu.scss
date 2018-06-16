@@ -19,6 +19,10 @@
     &--fixed {
       position: fixed;
     }
+
+    &:first-child {
+      position: relative;
+    }
   }
 
   & a {
@@ -48,6 +52,23 @@
   &:hover {
     box-shadow: 0 0 10px rgba(221, 232, 220, 0.5);
     transform: scale(1.1);
+  }
+}
+
+.assortment__list {
+  list-style: none;
+
+  & li {
+    padding-bottom: 5px;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+
+  & a {
+    padding: 5px 0 0 5px;
+    font-size: 18px;
+
   }
 }
 
@@ -105,5 +126,41 @@
       padding: 15px 0 15px 20px;
     }
   }
+
+  .assortment__list {
+    display: none;
+  }
+
+  .technika:hover .assortment__list {
+    position: absolute;
+    padding-top: 26px;
+    padding-left: 30px;
+    display: block;
+    width: 350px;
+
+    & li {
+      border: solid 1px #b4b4b4;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(243, 243, 243, 1) 50%, rgba(237, 237, 237, 1) 51%, rgba(255, 255, 255, 1) 100%);
+
+      &:hover {
+        background: linear-gradient(to bottom, #ffffff 0%, #ececec 50%, #e0e0e0 50%, #f2f2f2 100%);
+        border-left: solid 5px $primary__red;
+
+        & a {
+          padding-left: 26px;
+        }
+      }
+
+      & a {
+        color: $primary__black;
+        font-size: 22px;
+      }
+    }
+
+
+
+  }
+
+
 }
 

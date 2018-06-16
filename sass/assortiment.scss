@@ -17,140 +17,13 @@
 
 .assortment__handle {
   position: absolute;
-  padding: 5px 15px;
-  top: 0;
-  right: -15px;
-
-  &:hover .gear {
-    -webkit-animation-name: rotation_cw;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-name: rotation_cw;
-    -moz-animation-duration: 5s;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: linear;
-    -o-animation-name: rotation_cw;
-    -o-animation-duration: 5s;
-    -o-animation-iteration-count: infinite;
-    -o-animation-timing-function: linear;
-    animation-name: rotation_cw;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-  }
-
-  &:hover .gear--small {
-    -webkit-animation-name: rotation_ccw;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-name: rotation_ccw;
-    -moz-animation-duration: 1s;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: linear;
-    -o-animation-name: rotation_ccw;
-    -o-animation-duration: 1s;
-    -o-animation-iteration-count: infinite;
-    -o-animation-timing-function: linear;
-    animation-name: rotation_ccw;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-  }
+  padding: 0 7px;
+  top: -10px;
+  right: -18px;
 }
 
 .gear {
-  width: 20px;
-
-  &--small {
-    position: absolute;
-    top: 2px;
-    left: 4px;
-    width: 13px;
-  }
-}
-
-@-webkit-keyframes rotation_cw {
-  0% {-webkit-transform:rotate(0deg);
-    -moz-transform:rotate(0deg);
-    -o-transform:rotate(0deg);
-    transform:rotate(0deg);}
-  100% {-webkit-transform:rotate(360deg);
-    -moz-transform:rotate(360deg);
-    -o-transform:rotate(360deg);
-    transform:rotate(360deg);}
-}
-@-moz-keyframes rotation_cw {
-  0% {-webkit-transform:rotate(0deg);
-    -moz-transform:rotate(0deg);
-    -o-transform:rotate(0deg);
-    transform:rotate(0deg);}
-  100% {-webkit-transform:rotate(360deg);
-    -moz-transform:rotate(360deg);
-    -o-transform:rotate(360deg);
-    transform:rotate(360deg);}
-}
-@-o-keyframes rotation_cw {
-  0% {-webkit-transform:rotate(0deg);
-    -moz-transform:rotate(0deg);
-    -o-transform:rotate(0deg);
-    transform:rotate(0deg);}
-  100% {-webkit-transform:rotate(360deg);
-    -moz-transform:rotate(360deg);
-    -o-transform:rotate(360deg);
-    transform:rotate(360deg);}
-}
-@keyframes rotation_cw {
-  0% {-webkit-transform:rotate(0deg);
-    -moz-transform:rotate(0deg);
-    -o-transform:rotate(0deg);
-    transform:rotate(0deg);}
-  100% {-webkit-transform:rotate(360deg);
-    -moz-transform:rotate(720deg);
-    -o-transform:rotate(360deg);
-    transform:rotate(360deg);}
-}
-
-@-webkit-keyframes rotation_ccw {
-  100% {-webkit-transform:rotate(0deg);
-    -moz-transform:rotate(0deg);
-    -o-transform:rotate(0deg);
-    transform:rotate(0deg);}
-  0% {-webkit-transform:rotate(360deg);
-    -moz-transform:rotate(360deg);
-    -o-transform:rotate(360deg);
-    transform:rotate(360deg);}
-}
-@-moz-keyframes rotation_ccw {
-  100% {-webkit-transform:rotate(0deg);
-    -moz-transform:rotate(0deg);
-    -o-transform:rotate(0deg);
-    transform:rotate(0deg);}
-  0% {-webkit-transform:rotate(360deg);
-    -moz-transform:rotate(360deg);
-    -o-transform:rotate(360deg);
-    transform:rotate(360deg);}
-}
-@-o-keyframes rotation_ccw {
-  100% {-webkit-transform:rotate(0deg);
-    -moz-transform:rotate(0deg);
-    -o-transform:rotate(0deg);
-    transform:rotate(0deg);}
-  0% {-webkit-transform:rotate(360deg);
-    -moz-transform:rotate(360deg);
-    -o-transform:rotate(360deg);
-    transform:rotate(360deg);}
-}
-@keyframes rotation_ccw {
-  100% {-webkit-transform:rotate(0deg);
-    -moz-transform:rotate(0deg);
-    -o-transform:rotate(0deg);
-    transform:rotate(0deg);}
-  0% {-webkit-transform:rotate(360deg);
-    -moz-transform:rotate(360deg);
-    -o-transform:rotate(360deg);
-    transform:rotate(360deg);}
+  width: 40px;
 }
 
 .assortment__slide-block {
@@ -214,9 +87,11 @@
   box-shadow: -2px -2px #fff,
   2px  2px #d9d9d9;
   cursor: pointer;
+  transition: all 0.2s;
 
   &:hover {
-    box-shadow: 0 0 10px 4px #d9d9d9;
+    box-shadow: 0 0 30px 10px #d9d9d9;
+    transform: scale(1.1);
   }
 }
 

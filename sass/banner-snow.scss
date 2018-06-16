@@ -1,18 +1,20 @@
 @media (min-width: 1000px) {
   .banner-snow {
-    padding-left: 350px;
-    background: url('../img/banner-snow@2x.jpg') no-repeat;
+    padding-top: 55px;
+    background: url('../img/banner-snow@2x.png') no-repeat;
+    background-size: contain;
+    background-position-y: 100px;
   }
 }
 
 @media (min-width: 768px) {
   .banner-snow {
-    padding-left: 210px;
-    padding-top: 100px;
+    padding-left: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: flex-start;
     min-height: 493px;
-    background: url('../img/banner-snow@mobile.jpg') no-repeat;
+    background: url('../img/banner-snow@mobile.png') no-repeat;
+    background-size: contain;
   }
 }
