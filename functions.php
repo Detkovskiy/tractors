@@ -43,13 +43,13 @@ function build_tree($sort_arr_categories) {
  * @return string
  */
 function render_template_menu($category) {
-    $page_id = ($category['menu_name'] == "Главная")? "": '?page=' . $category['id'];
+   // $page_id = ($category['menu_name'] == "Главная")? "": '?page=' . $category['id'];
     $class = ($category['class'] == null)? "": 'class="' . $category['class'] .'"';
 
     if ($category['link'] == 'no') {
       $link = '';
     } else {
-      $link = 'href="' . $category['link'] .'.php'. $page_id;
+      $link = 'href="' . $category['link'] .'.php';
     }
 
     $menu = '<li ' . $class . '><a '. $link .'">'. $category['menu_name'].'</a>';
