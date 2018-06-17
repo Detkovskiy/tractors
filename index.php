@@ -1,5 +1,6 @@
 <?php session_start();
 require_once 'init.php';
+
 $result = $_SERVER['REQUEST_URI'];
 
 $title = "Главная";
