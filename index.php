@@ -1,6 +1,24 @@
 <?php session_start();
 require_once 'init.php';
+
 $result = $_SERVER['REQUEST_URI'];
+
+/*if (preg_match ("/([^a-zA-Z0-9\.\/\-\_\#])/", $result)) {
+
+  header("HTTP/1.0 404 Not Found");
+  echo "Недопустимые символы в URL";
+  exit;
+}*/
+
+$array_url = preg_split ("/(\/|\..*$)/", $result,-1, PREG_SPLIT_NO_EMPTY);
+
+print_r(end($array_url));
+
+if (!$array_url) {
+  $ID_page = 1;
+}else {
+  $sef_value = $array_url[0];
+}
 
 $title = "Главная";
 

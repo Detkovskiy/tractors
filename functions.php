@@ -43,6 +43,26 @@ function build_tree($sort_arr_categories) {
  * @return string
  */
 function render_template_menu($category) {
+  $page_id = ($category['menu_name'] == "Главная")? "": '?page=' . $category['id'];
+  $class = ($category['class'] == null)? "": 'class="' . $category['class'] .'"';
+
+  if ($category['link'] == 'no') {
+    $link = '';
+  } else {
+    $link = 'href="' . $category['link'] .'.php';
+  }
+
+  $menu = '<li ' . $class . '><a '. $link .'">'. $category['menu_name'].'</a>';
+
+  if(isset($category['childs'])){
+    $menu .= '<ul class="dropdown">'. render_menu($category['childs']) .'</ul>';
+  }
+  $menu .= '</li>';
+
+  return $menu;
+}
+/*
+function render_template_menu($category) {
     $page_id = ($category['menu_name'] == "Главная")? "": '?page=' . $category['id'];
     $class = ($category['class'] == null)? "": 'class="' . $category['class'] .'"';
 
@@ -60,7 +80,7 @@ function render_template_menu($category) {
     $menu .= '</li>';
 
     return $menu;
-}
+}*/
 
 /**
  * Заполняем шаблон данными
