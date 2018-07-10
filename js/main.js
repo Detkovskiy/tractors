@@ -67,7 +67,6 @@ $(function(){
 
 });
 
-
 ymaps.ready(init);
 
 function init(){
