@@ -1,6 +1,6 @@
 <div class="container main-title">
   <div class="banner-snow">
-    <h1>Аренда экскаватора погрузчика в СПБ</h1>
+    <h1>Аренда экскаватора погрузчика в <?= $city; ?></h1>
     <span class="main-title__span">24 часа. Подача за 60 минут</span>
     <span class="main-title__span main-title__span--small">Санкт-Петербург и Ленинградская облать</span>
   </div>
@@ -26,9 +26,7 @@
               <img class="assortment__item-img" src="img/assortment/volvo-bl71@1x.png" srcset="img/assortment/volvo-bl71@2x.png 2x" alt="Экскаватор погрузчик volvo bl71">
             </picture>
           </div>
-
           <div class="item__description">
-
             <div class="row">
               <div class="item__description-left  item__name">
                 <strong>VOLVO BL71 и BL61B</strong>
@@ -42,10 +40,8 @@
                 от
                 <span class="assortment__price">1250</span>
                 <span class="assortment__price-icon">/час</span>
-
               </div>
             </div>
-
             <div class="row">
               <div class="item__description-left  item__ttx">
                 <div>
@@ -63,12 +59,10 @@
               </div>
               <div class="item__description-right  item__btn">
                 <a class="button open-modal__order" data-target="Volvo BL71">Заказать</a>
-                <a href="#" class="button">О моделе</a>
+                <a class="button">О моделе</a>
               </div>
             </div>
-
           </div>
-
         </li>
         <li class="assortment__item">
           <div class="item__img">
@@ -76,25 +70,20 @@
               <img class="assortment__item-img" src="img/assortment/komatsu-wb97s@1x.png" srcset="img/assortment/komatsu-wb97s@2x.png 2x" alt="Экскаватор погрузчик Komatsu WB97S">
             </picture>
           </div>
-
           <div class="item__description">
-
             <div class="row">
               <div class="item__description-left  item__name">
                 <strong>KOMATSU WB97S</strong>
                 <p>Экскаваторы погрузчики KOMATSU отличаются высокой надежностью и эффективностью в работе, а также высокой производительностью.</p>
                 <p>Повышенное значение грузоподъемности позволяет применяют KOMATSU для выполнения любых земляных работ, в строительствах и ремонтных работах.</p>
                 <p>Экскаваторы погрузчики KOMATSU способны выполнять широкий спектр операций.</p>
-
               </div>
               <div class="item__description-right  item__price">
                 от
                 <span class="assortment__price">1250</span>
                 <span class="assortment__price-icon">/час</span>
-
               </div>
             </div>
-
             <div class="row">
               <div class="item__description-left  item__ttx">
                 <div>
@@ -112,12 +101,10 @@
               </div>
               <div class="item__description-right  item__btn">
                 <a class="button open-modal__order" data-target="Komatsu WB97S">Заказать</a>
-                <a href="#" class="button">О моделе</a>
+                <a class="button">О моделе</a>
               </div>
             </div>
-
           </div>
-
         </li>
         <li class="assortment__item">
           <div class="item__img">
@@ -125,9 +112,7 @@
               <img class="assortment__item-img" src="img/assortment/terex-970@1x.png" srcset="img/assortment/terex-970@2x.png 2x" alt="Экскаватор погрузчик terex 970">
             </picture>
           </div>
-
           <div class="item__description">
-
             <div class="row">
               <div class="item__description-left  item__name">
                 <strong>TEREX 970</strong>
@@ -141,10 +126,8 @@
                 от
                 <span class="assortment__price">1250</span>
                 <span class="assortment__price-icon">/час</span>
-
               </div>
             </div>
-
             <div class="row">
               <div class="item__description-left  item__ttx">
                 <div>
@@ -162,12 +145,10 @@
               </div>
               <div class="item__description-right  item__btn">
                 <a class="button open-modal__order" data-target="TEREX 970">Заказать</a>
-                <a href="#" class="button">О моделе</a>
+                <a class="button">О моделе</a>
               </div>
             </div>
-
           </div>
-
         </li>
         <li class="assortment__item">
           <div class="item__img">
@@ -175,9 +156,7 @@
               <img class="assortment__item-img" src="img/assortment/cat-312c@1x.png" srcset="img/assortment/cat-312c@2x.png 2x" alt="Экскаватор Cat 312c">
             </picture>
           </div>
-
           <div class="item__description">
-
             <div class="row">
               <div class="item__description-left  item__name">
                 <strong>CAT 312C</strong>
@@ -188,10 +167,8 @@
                 от
                 <span class="assortment__price">1250</span>
                 <span class="assortment__price-icon">/час</span>
-
               </div>
             </div>
-
             <div class="row">
               <div class="item__description-left  item__ttx">
                 <div>
@@ -212,9 +189,7 @@
                 <a href="#" class="button">О моделе</a>
               </div>
             </div>
-
           </div>
-
         </li>
         <li class="assortment__item">
           <div class="item__img">
@@ -222,9 +197,7 @@
               <img class="assortment__item-img" src="img/assortment/volvo-bl71@1x.png" srcset="img/assortment/volvo-bl71@2x.png 2x" alt="Экскаватор погрузчик volvo bl71">
             </picture>
           </div>
-
           <div class="item__description">
-
             <div class="row">
               <div class="item__description-left  item__name">
                 <strong>VOLVO BL71</strong>
@@ -238,10 +211,8 @@
                 от
                 <span class="assortment__price">1250</span>
                 <span class="assortment__price-icon">/час</span>
-
               </div>
             </div>
-
             <div class="row">
               <div class="item__description-left  item__ttx">
                 <div>
@@ -259,12 +230,10 @@
               </div>
               <div class="item__description-right  item__btn">
                 <a class="button open-modal__order" data-target="Volvo BL71">Заказать</a>
-                <a href="#" class="button">О моделе</a>
+                <a class="button">О моделе</a>
               </div>
             </div>
-
           </div>
-
         </li>
       </ul>
     </div>

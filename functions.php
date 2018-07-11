@@ -1,7 +1,6 @@
 <?php
 
 require_once 'mysql_helper.php';
-//require_once 'vendor/autoload.php';
 
 /**
  *  Создаем масив где ключ массива является ID меню
@@ -36,7 +35,6 @@ function build_tree($sort_arr_categories) {
     return $tree;
 }
 
-
 /**
  * Шаблон для формирования меню
  * @param $category
@@ -44,15 +42,18 @@ function build_tree($sort_arr_categories) {
  */
 function render_template_menu($category) {
    // $page_id = ($category['menu_name'] == "Главная")? "": '?page=' . $category['id'];
-    $class = ($category['class'] == null)? "": 'class="' . $category['class'] .'"';
+    $class = ($category['class'] == null)? '': 'class="' . $category['class'] .'"';
 
     if ($category['link'] == 'no') {
       $link = '';
-    } else {
-      $link = 'href="' . $category['link'] .'.php';
+    } else if ($category['link']{0} == '#') {
+        $link = 'href="' . $category['link'] . '"';
+      }
+        else {
+        $link = 'href="' . $category['link'] .'.php"';
     }
 
-    $menu = '<li ' . $class . '><a '. $link .'">'. $category['menu_name'].'</a>';
+    $menu = '<li ' . $class . '><a '. $link .'>'. $category['menu_name'].'</a>';
 
     if(isset($category['childs'])){
         $menu .= '<ul class="dropdown">'. render_menu($category['childs']) .'</ul>';
@@ -93,212 +94,6 @@ function render_template($file_template, $data) {
     } else {
         return '';
     }
-}
-
-/**
- * Валидация формы добавления лота
- *
- * Проверяет поля формы на пустоту и валидность полей для цифр.
- * Возврашает массив с ошибками.
- *
- * @return array
- */
-function validation() {
-    $errors = [];
-    $field_numeric = ['lot-rate', 'lot-step'];
-    $empty_field = ['lot-name', 'category', 'message', 'lot-date'];
-
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        foreach ($field_numeric as $value_field) {
-            if (!is_numeric($_POST[$value_field]))  {
-                $errors[] = $value_field;
-            }
-            if ($_POST[$value_field] == 0) {
-                $errors[] = $value_field;
-            }
-        }
-
-        foreach ($empty_field as $value_field) {
-            if ($_POST[$value_field] == '') {
-                $errors[] = $value_field;
-            }
-        }
-    }
-
-    return $errors;
-}
-
-/**
- * Валидация файла
- *
- * Принимает файл из формы, проверяет его формат и размер, переносит его в указанную папку и возвращает массив с ошибками или ссылку на файл
- *
- * @param string $field_form
- * @return array
- */
-function file_validation($field_form) {
-    $mime_type = ['image/png', 'image/jpeg'];
-    $result['error'] = '';
-
-    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES[$field_form]) && ($_FILES[$field_form]['size'] > 0)) {
-        $file_tmp_name = $_FILES[$field_form]['tmp_name'];
-        $file_size = $_FILES[$field_form]['size'];
-        $file_type = mime_content_type($file_tmp_name);
-        $file_max_size = 1000000;
-
-        if (!in_array($file_type, $mime_type)){
-            $result['error'] = 'Загрузите картинку в формате jpg или png' . "<br>";
-        }
-
-        if ($file_size > $file_max_size) {
-            $result['error'] .= 'Максимальный размер файла не должен превышать - 1МБ';
-        }
-
-        if (empty($result['error'])) {
-            $file_name = $_FILES[$field_form]['name'];
-            if ($field_form == "avatar") {
-                $file_path = __DIR__ . '/img/avatars/';
-                $file_url = 'img/avatars/' . $file_name;
-                move_uploaded_file($_FILES[$field_form]['tmp_name'], $file_path . $file_name);
-                $result['url'] = $file_url;
-            } else {
-                $file_path = __DIR__ . '/img/';
-                $file_url = 'img/' . $file_name;
-                move_uploaded_file($_FILES[$field_form]['tmp_name'], $file_path . $file_name);
-                $result['url'] = $file_url;
-            }
-        }
-    }
-
-    return $result;
-}
-
-/**
- * Валидация входа на сайт
- *
- * Принимает ресур соединения с БД и почту.
- * Проверяет поля формы на пустоту и валидность введенного пользователем email.
- * Проверяет наличие введенной почты в БД.
- * Возврашает массив с ошибками.
- *
- * @param $link
- * @param string $email
- * @return array
- */
-function login_validation($link, $email) {
-    $errors = [];
-    $user = null;
-    $empty_field = ['email', 'password'];
-
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-        foreach ($empty_field as $value_field) {
-            if ($_POST[$value_field] == '') {
-                $errors[] = $value_field;
-            }
-        }
-
-        if (!in_array('email', $errors)) {
-            if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-                $errors[] = 'error_mail_validation';
-            }
-        }
-    }
-
-    /**
-     * Если поля формы заполнены и валидны, проходит поиск пользователя в БД по введенному email
-     */
-    if (empty($errors)) {
-        $sql_user = '
-          SELECT id, email, password, name, avatar 
-          FROM user
-          WHERE email = ?;';
-
-        if (!$user = select_data($link, $sql_user, [$email])[0]) {
-            $errors[] = 'no_user';
-        }
-    }
-
-    $result = ['errors' => $errors, 'user' => $user];
-
-    return $result;
-}
-
-/**
- * Валидация формы регистрации нового пользователя
- *
- * Проверяет поля формы на пустоту и валидность введенного пользователем email.
- * Возврашает массив с ошибками.
- *
- * @return array
- */
-function registration_validation() {
-    $errors = [];
-    $empty_field = ['email', 'password', 'name', 'message'];
-
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-        foreach ($empty_field as $value_field) {
-            if ($_POST[$value_field] == '') {
-                $errors[] = $value_field;
-            }
-        }
-
-        if (!in_array('email', $errors)) {
-            if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-                $errors[] = 'error_mail_validation';
-            }
-        }
-    }
-
-    return $errors;
-}
-
-/**
- * Проверка введенной ставки
- *
- * Проверяет введеную ставку на: пустоту поля, введены только цифры и ставка больше уже существуещей ставки
- *
- * @param int $bet
- * @return array
- */
-function cost_validation($bet) {
-    $errors = [];
-
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        if ($_POST['cost'] == '') {
-            $errors[] = 'empty';
-        }
-        if (!is_numeric($_POST['cost']))  {
-            $errors[] = 'no_numeric';
-        }
-        if ($_POST['cost'] < $bet) {
-            $errors[] = 'no_first_bet';
-        }
-    }
-
-    return $errors;
-}
-
-/**
- * Проверка ставки
- *
- * Проверяет наличие ставки пользователя у лота
- *
- * @param array $array
- * @return boolean
- */
-function find_bet($array) {
-    $result = false;
-
-    foreach ($array as $bet) {
-        if ($bet['user_id'] === $_SESSION['user']['id']) {
-            $result = true;
-            break;
-        }
-    }
-
-    return $result;
 }
 
 /**

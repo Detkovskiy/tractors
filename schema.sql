@@ -21,3 +21,9 @@ CREATE TABLE `contact` (
   `telegram` text,
   `watsapp` text
 );
+
+CREATE TABLE `city` (
+  `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `city_name` text,
+  `utm_metka` text
+);

@@ -36,8 +36,8 @@
 
     <div class="wrapper__feedback">
       <div class="feedback">
-        <a href="tel:+79219002460" class="call-me__phone">
-          <span class="call-me__phone--color">+7 (<?= $contact['tel_code_sity'] ?>)</span> <?= $contact['tel'] ?>
+        <a href="tel:+7<?= $contact['tel_code_mobile'] ?><?= str_replace('-', '', $contact['tel']); ?>" class="call-me__phone">
+          <span class="call-me__phone--color">+7 (<?= $contact['tel_code_city'] ?>)</span> <?= $contact['tel'] ?>
         </a>
         <a href="mailto:<?= $contact['email'] ?>" class="call-me__email">
           <span class="call-me__email--color"><?= $contact['email'] ?></span>
@@ -52,7 +52,7 @@
   <?= $main_menu ?>
 </header>
 
-  <?= require_once "$content" ?>
+<?= $content ?>
 
 <footer>
   <div class="container  container--footer">
@@ -62,7 +62,7 @@
       <li><a href="#price">Прайс</a></li>
       <li><a href="#contacts">Контакты</a></li>
     </ul>
-    <a href="tel:+79219002460" class="link-tel  link-tel--footer">
+    <a href="tel:+7<?= $contact['tel_code_mobile'] ?><?= str_replace('-', '', $contact['tel']); ?>" class="link-tel  link-tel--footer">
       <span class="phone-in-text">+7 (<?= $contact['tel_code_mobile'] ?>) <?= $contact['tel'] ?></span>
     </a>
     <div class="copyright">
@@ -132,6 +132,7 @@
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <link href="css/zozo.tabs.min.css" rel="stylesheet">
 <script src="js/input-mask.js"></script>
+<script src="js/jquery.event.move.js"></script>
 <script src="js/main.js"></script>
 
 
@@ -155,6 +156,7 @@
   });
 </script>
 <script src="js/send-mail.js"></script>
+
 
 <!--
 <script src="js/jquery.min.js"></script>

@@ -6,7 +6,7 @@ INSERT INTO meta (description, keywords, og_title, og_description, og_url_page, 
    'Комплексное выполнение земляных работ в СПБ. Земляные работы выполняем точно по проектной документации. Собственная строительная техники.',
    'https://xxx.ru/img/zemljanye-raboty-spb-tablet.jpg', 'https://xxx.ru/img/');
 
-INSERT INTO contact (tel_code_sity, tel_code_mobile, tel, email, adres_sity, adres_street, vk, viber, telegram, watsapp)
+INSERT INTO contact (tel_code_city, tel_code_mobile, tel, email, adres_sity, adres_street, vk, viber, telegram, watsapp)
   VALUE
   ('812',
    '921',
@@ -20,3 +20,32 @@ INSERT INTO contact (tel_code_sity, tel_code_mobile, tel, email, adres_sity, adr
    'whatsapp://send?text=Здравствуйте!&phone=+79219002460'
   );
 
+INSERT INTO city (city_name, utm_metka)
+  VALUE
+  ('Красном селе', 'krasnoe'),
+  ('Яльгелево', 'ygelevo'),
+  ('Разбегаево', 'razbegaevo'),
+  ('Горбунках', 'garbynki'),
+  ('Стрельне', 'strelna'),
+  ('Ломоносове', 'lomonosov'),
+  ('Малое Карлино', 'karlino'),
+  ('Новоселье', 'novosele'),
+  ('Аннино', 'annino'),
+  ('Пушкине', 'pyshkin'),
+  ('Гатчине', 'gatchina'),
+  ('Тайцах', 'taici'),
+  ('Пудости', 'pydost'),
+  ('Кипени', 'kipen'),
+  ('Александровском', 'alexandrovskoe'),
+  ('Всеволожске', 'vsevolojsk'),
+  ('Буграх', 'bygri'),
+  ('Колпино', 'kolpino'),
+  ('Павловске', 'pavlovsk'),
+  ('Песочном', 'pesochnoe'),
+  ('Разметелево', 'razmetelevo');
+
+
+INSERT INTO menu (menu_name, link, parent, class) VALUE
+  (
+    'Стоимость', '#price', 0, null
+);

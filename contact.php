@@ -1,4 +1,5 @@
 <?php session_start();
+require_once 'init.php';
 /**
  * Created by PhpStorm.
  * User: Yura
@@ -6,4 +7,3 @@
  * Time: 18:11
  */
 
-print_r($_SESSION);
