@@ -9,4 +9,7 @@ css/*.css
 node_modules/
 Thumbs.db
 build/
-get_user.php
+css/
+tr_menu.sql
+/get_user.php
+/tr_menu.sql
