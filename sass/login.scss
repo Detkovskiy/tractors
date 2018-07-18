@@ -1,0 +1,33 @@
+.login-form {
+  margin-top: 80px;
+  margin-bottom: 100px;
+  padding-left: 20px;
+
+  & .login__item input {
+    padding: 10px;
+  }
+}
+
+.login-tittle {
+  margin-top: 80px;
+
+  & span {
+    padding: 20px;
+  }
+}
+
+.login__item {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  min-width: 300px;
+
+  & * {
+    margin-bottom: 10px;
+  }
+}
+
+.login__error {
+
+}

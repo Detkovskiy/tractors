@@ -56,12 +56,12 @@
 
 <footer>
   <div class="container  container--footer">
-    <ul class="footer__nav">
+    <!--<ul class="footer__nav">
       <li><a href="#assortment">Техника</a></li>
       <li><a href="#services">Услуги</a></li>
       <li><a href="#price">Прайс</a></li>
       <li><a href="#contacts">Контакты</a></li>
-    </ul>
+    </ul>-->
     <a href="tel:+7<?= $contact['tel_code_mobile'] ?><?= str_replace('-', '', $contact['tel']); ?>" class="link-tel  link-tel--footer">
       <span class="phone-in-text">+7 (<?= $contact['tel_code_mobile'] ?>) <?= $contact['tel'] ?></span>
     </a>
@@ -157,7 +157,16 @@
 </script>
 <script src="js/send-mail.js"></script>
 
-
+<script type="text/javascript" src="path/to/jquery.events.touch.js"></script>
+<link rel="stylesheet" href="css/lightcase.css">
+<script defer src="js/lightcase.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+    $('a[data-rel^=lightcase]').lightcase({
+      swipe: true
+    });
+  });
+</script>
 <!--
 <script src="js/jquery.min.js"></script>
 

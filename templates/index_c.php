@@ -1032,7 +1032,7 @@
   </div>
 </section>
 
-<section id="contact">
+<section id="contacts">
   <div class="container  container--price">
     <h2><span>Контакты</span></h2>
     <div class="contact">

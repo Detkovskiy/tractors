@@ -159,3 +159,54 @@ function exec_query($link, $sql, $data) {
 }
 
 
+
+/**
+ * Валидация входа на сайт
+ *
+ * Принимает ресур соединения с БД и почту.
+ * Проверяет поля формы на пустоту и валидность введенного пользователем email.
+ * Проверяет наличие введенной почты в БД.
+ * Возврашает массив с ошибками.
+ *
+ * @param $link
+ * @param string $email
+ * @return array
+ */
+function login_validation($link, $email) {
+  $errors = [];
+  $user = null;
+  $empty_field = ['email', 'password'];
+
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    foreach ($empty_field as $value_field) {
+      if ($_POST[$value_field] == '') {
+        $errors[] = $value_field;
+      }
+    }
+
+    if (!in_array('email', $errors)) {
+      if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        $errors[] = 'error_mail_validation';
+      }
+    }
+  }
+
+  /**
+   * Если поля формы заполнены и валидны, проходит поиск пользователя в БД по введенному email
+   */
+  if (empty($errors)) {
+    $sql_user = '
+          SELECT id, email, password, name, avatar 
+          FROM user
+          WHERE email = ?;';
+
+    if (!$user = select_data($link, $sql_user, [$email])[0]) {
+      $errors[] = 'no_user';
+    }
+  }
+
+  $result = ['errors' => $errors, 'user' => $user];
+
+  return $result;
+}

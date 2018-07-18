@@ -1,12 +1,12 @@
 <?php session_start();
 require_once 'init.php';
+/**
+ * Created by PhpStorm.
+ * User: Yura
+ * Date: 17.06.2018
+ * Time: 18:11
+ */
 
-$city = "СПБ";
-if (!empty($_GET['utm_term'])) {
-  $sql_city = 'SELECT city_name FROM city WHERE utm_metka = ?';
-  $arr_city = select_data($link, $sql_city, [$_GET['utm_term']]);
-  $city = empty($arr_city[0]['city_name']) ? "СПБ" : $arr_city[0]['city_name'];
-}
 
 $arr_categories = select_data($link, 'SELECT menu_name, id, parent, link, class FROM menu;', '');
 $sort_arr_categories = get_categories($arr_categories);
@@ -29,9 +29,9 @@ $main_menu = render_template('templates/main-menu.php',
     'print_menu' => $print_menu
   ]);
 
-$content = render_template('templates/index_c.php',
+$content = render_template('templates/gallery.php',
   [
-    'city' => $city
+
   ]);
 
 $layout = render_template('templates/layout.php',
@@ -44,5 +44,3 @@ $layout = render_template('templates/layout.php',
   ]);
 
 print $layout;
-
-
