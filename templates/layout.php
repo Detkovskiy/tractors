@@ -157,7 +157,7 @@
 </script>
 <script src="js/send-mail.js"></script>
 
-<script type="text/javascript" src="path/to/jquery.events.touch.js"></script>
+<script type="text/javascript" src="js/jquery.events.touch.min.js"></script>
 <link rel="stylesheet" href="css/lightcase.css">
 <script defer src="js/lightcase.js"></script>
 <script type="text/javascript">

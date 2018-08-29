@@ -49,3 +49,10 @@ INSERT INTO menu (menu_name, link, parent, class) VALUE
   (
     'Стоимость', '#price', 0, null
 );
+
+INSERT INTO gallery_categories(category_name)
+  VALUE
+  ('Земляные работы'),
+  ('Асфальтирование'),
+  ('Благоустройство'),
+  ('Все категории');

@@ -1,0 +1,53 @@
+
+/* Пагинация */
+
+.pagination-list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 22px 20px;
+  list-style: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #ffffff;
+}
+
+.pagination-item {
+  margin-right: 5px;
+}
+
+.pagination-item a {
+  color: #4d4e53;
+  padding: 5px 10px;
+}
+
+.pagination-item a:hover {
+  color: #fcd81d;
+}
+
+.pagination-item a:active {
+  color: #fcd81d;
+}
+
+.pagination-item-prev {
+  margin-right: auto;
+}
+
+.pagination-item-next {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.pagination-item-active a {
+  color: #25434e;
+  background-color: #fcd81d;
+}
+
+.pagination-item-active a:hover {
+  color: #25434e;
+}
+
+.pagination-item-active a:active {
+  color: #25434e;
+}

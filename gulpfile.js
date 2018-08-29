@@ -95,8 +95,16 @@ gulp.task("serve", function() {
   gulp.watch("*.php", ["copy_php"]);
   gulp.watch("form_action/*.php", ["copy_php_form"]);
   gulp.watch("templates/*.php", ["copy_php_templates"]);
+  gulp.watch("build/templates/*.php").on("change", server.reload);
   gulp.watch("build/*.php").on("change", server.reload);
   gulp.watch("build/form_action/*.php").on("change", server.reload);
+  gulp.watch("gallery/**", ["gallery"]);
+  gulp.watch("build/gallery/**").on("change", server.reload);
+});
+
+gulp.task("gallery", function() {
+  return gulp.src("gallery/**")
+    .pipe(gulp.dest("build/gallery/"));
 });
 
 gulp.task("copy_html", function() {
@@ -122,6 +130,8 @@ gulp.task("copy_php_templates", function() {
 gulp.task("copy", function() {
   return gulp.src([
     "fonts/**",
+    "gallery/**",
+    "vendor/**",
     "img/**",
     "js/**",
     "documents/**",

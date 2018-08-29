@@ -12,7 +12,7 @@ if (isset($_SERVER['REQUEST_METHOD']) && ($_SERVER['REQUEST_METHOD'] == 'POST'))
     if (password_verify($_POST['password'], $user_password)) {
 
       $_SESSION['user'] = 'anton';
-      header("Location: index.php");
+      header("Location: add-img.php");
 
     } else {
 

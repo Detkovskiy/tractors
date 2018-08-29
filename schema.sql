@@ -27,3 +27,21 @@ CREATE TABLE `city` (
   `city_name` text,
   `utm_metka` text
 );
+
+CREATE TABLE gallery_categories(
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  category_name CHAR(100)
+);
+
+CREATE TABLE `gallery_img` (
+  `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `category` text,
+  `title` text,
+  `description` text,
+  `link_lightbox` text,
+  `link_img_2x` text,
+  `link_img_1x` text,
+  `link_mobile_2x` text,
+  `link_mobile_1x` text,
+  `date` DATE
+);

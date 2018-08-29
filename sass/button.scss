@@ -50,6 +50,10 @@
     text-transform: none;
     border-radius: 0;
   }
+
+  &--submit {
+    border: none;
+  }
 }
 
 @media (min-width: 768px) {

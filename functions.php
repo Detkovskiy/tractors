@@ -46,7 +46,7 @@ function render_template_menu($category) {
 
     if ($category['link'] == 'no') {
       $link = '';
-    } else if ($category['link']{0} == '#') {
+    } else if ($category['link']{0} == '#' || $category['link']{0} == '/') {
         $link = 'href="' . $category['link'] . '"';
       }
         else {
@@ -207,6 +207,36 @@ function login_validation($link, $email) {
   }
 
   $result = ['errors' => $errors, 'user' => $user];
+
+  return $result;
+}
+
+
+
+/**
+ * Валидация файла
+ *
+ * Принимает файл из формы, проверяет его формат и размер, переносит его в указанную папку и возвращает массив с ошибками или ссылку на файл
+ *
+ * @param string $field_form
+ * @return array
+ */
+function file_validation($field_form) {
+  $mime_type = ['image/png', 'image/jpeg'];
+  $result['error'] = '';
+
+  $file_tmp_name = $_FILES[$field_form]['tmp_name'];
+  $file_size = $_FILES[$field_form]['size'];
+  $file_type = mime_content_type($file_tmp_name);
+  $file_max_size = 10000000;
+
+  if (!in_array($file_type, $mime_type)){
+    $result['error'] = 'Загрузите картинку в формате jpg или png' . "<br>";
+  }
+
+  if ($file_size > $file_max_size) {
+    $result['error'] .= 'Максимальный размер файла не должен превышать - 10МБ';
+  }
 
   return $result;
 }

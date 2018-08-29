@@ -48,12 +48,12 @@
 </section>
 <?php if ($page_count > 1) : ?>
 <ul class="pagination-list">
-    <li class="pagination-item pagination-item-prev"><a href="index.php?page=<?= $current_page - 1; ?><?= isset($_GET['id']) ? '&id=' . $_GET['id'] : '' ; ?>"><?= isset($_GET['page']) && ($_GET['page'] == 1) || !isset($_GET['page']) ? '' : 'Назад' ; ?></a></li>
+    <li class="pagination-item pagination-item-prev"><a href="index.html?page=<?= $current_page - 1; ?><?= isset($_GET['id']) ? '&id=' . $_GET['id'] : '' ; ?>"><?= isset($_GET['page']) && ($_GET['page'] == 1) || !isset($_GET['page']) ? '' : 'Назад' ; ?></a></li>
     <?php foreach ($pages as $page) : ?>
         <li class="pagination-item <?= ($page == $current_page) ? 'pagination-item-active' : '' ;?> ">
-            <a href="index.php?page=<?= $page; ?><?= isset($_GET['id']) ? '&id=' . $_GET['id'] : '' ; ?>"><?= $page; ?></a>
+            <a href="index.html?page=<?= $page; ?><?= isset($_GET['id']) ? '&id=' . $_GET['id'] : '' ; ?>"><?= $page; ?></a>
         </li>
     <?php endforeach; ?>
-    <li class="pagination-item pagination-item-next"><a href="index.php?page=<?= $current_page + 1; ?><?= isset($_GET['id']) ? '&id=' . $_GET['id'] : '' ; ?>"><?= isset($_GET['page']) && (count($pages) == $_GET['page']) ? '' : 'Вперед' ; ?></a></li>
+    <li class="pagination-item pagination-item-next"><a href="index.html?page=<?= $current_page + 1; ?><?= isset($_GET['id']) ? '&id=' . $_GET['id'] : '' ; ?>"><?= isset($_GET['page']) && (count($pages) == $_GET['page']) ? '' : 'Вперед' ; ?></a></li>
 </ul>
 <?php endif; ?>
